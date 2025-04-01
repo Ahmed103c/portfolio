@@ -1,6 +1,10 @@
-p {
+#experience-component {
+  margin-top: 15px;
+  height: 90vh;
   padding: 15px;
   border: solid rgb(9, 77, 194);
   border-radius: 10px;
+}
+p {
   text-align: center;
 }
