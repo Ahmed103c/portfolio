@@ -1,12 +1,14 @@
 #projects-component {
+  color: white;
   margin-top: 15px;
   height: 90vh;
   padding: 15px;
-  background-color: rgb(22, 155, 203);
+  /* background-color: rgb(22, 155, 203); */
   border: solid rgb(9, 77, 194);
   border-radius: 10px;
 }
 .navigation {
+  color: white;
   display: grid;
   grid-template-columns: 0.05fr 2fr 0.05fr;
   grid-template-rows: minmax(100px, auto);
@@ -17,7 +19,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  background-color: brown;
+  /* background-color: brown; */
   grid-column: 1;
   grid-row: 1;
 }
@@ -26,7 +28,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  background-color: brown;
+  /* background-color: brown; */
   grid-column: 3;
   grid-row: 1;
 }
@@ -39,6 +41,26 @@
   grid-column: 2;
   grid-row: 1 / 50;
 }
-p {
-  text-align: center;
+.card-project-inner-grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* grid-template-rows: minmax(550px, auto); */
+  grid-template-rows: repeat(3, 150px) auto;
+  gap: 10px;
+}
+.project-photo {
+  border: solid violet;
+  grid-column: 1;
+  grid-row: 1/10;
+}
+.project-name {
+  border: solid violet;
+  grid-column: 2;
+  grid-row: 1/2;
+}
+.project-description {
+  border: solid violet;
+  grid-column: 2;
+  grid-row: 2/4;
 }
