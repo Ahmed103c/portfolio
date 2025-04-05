@@ -1,10 +1,9 @@
 nav {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   border: solid black;
   border-radius: 10px;
   width: 99%;
   height: 40px;
-  /* position: fixed; */ /* pour que navbar reste meme si on scroll en bas */
   top: 5px;
 }
 nav ul {
@@ -17,6 +16,7 @@ nav ul {
 
 nav ul li a {
   color: black;
+  color: white;
   text-decoration: none;
 }
 nav ul li:hover {

@@ -3,7 +3,17 @@
     <div class="navigation">
         <button class="left" (click)="previousProject()">⬅️</button>
         <div class="card-project">
-            {{ projects[currentIndex] }}
+            <div class="card-project-inner-grid">
+                <div class="project-photo">
+                    ici photo
+                </div>
+                <div class="project-name">
+                    {{ projects[currentIndex] }}
+                </div>
+                <div class="project-description">
+                    ici Desciprition
+                </div>
+            </div>
         </div>
         <button class="right" (click)="nextProject()">➡️</button>
     </div>

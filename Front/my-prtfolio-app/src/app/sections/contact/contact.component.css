@@ -1,8 +1,9 @@
 #contact-component {
+  color: white;
   margin-top: 15px;
   height: 90vh;
   padding: 15px;
-  background-color: rgb(22, 155, 203);
+  /* background-color: rgb(22, 155, 203); */
   border: solid rgb(9, 77, 194);
   border-radius: 10px;
 }
