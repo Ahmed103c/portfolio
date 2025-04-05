@@ -1,3 +1,10 @@
-<div class="projects-container">
-    <p>projects works!</p>
+<div id="projects-component">
+    Personal-Projects<br><br>
+    <div class="navigation">
+        <button class="left" (click)="previousProject()">⬅️</button>
+        <div class="card-project">
+            {{ projects[currentIndex] }}
+        </div>
+        <button class="right" (click)="nextProject()">➡️</button>
+    </div>
 </div>
