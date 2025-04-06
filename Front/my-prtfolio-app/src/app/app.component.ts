@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PresentationComponent } from './sections/presentation/presentation.component';
@@ -13,6 +13,7 @@ import { ContactComponent } from './sections/contact/contact.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'my-prtfolio-app';
 }

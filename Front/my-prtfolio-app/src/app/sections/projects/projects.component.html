@@ -5,16 +5,20 @@
         <div class="card-project">
             <div class="card-project-inner-grid">
                 <div class="project-photo">
-                    ici photo
+                    <img [src]="project_photo" alt="photo">
+                    <button class="img-left" (click)="previousImg()">Previous</button>
+                    <button class="img-right" (click)="nextImg()">Next</button>
                 </div>
                 <div class="project-name">
-                    {{ projects[currentIndex] }}
+                    <!-- {{ projects[currentIndex] }} -->
+                    {{project_name}}
                 </div>
                 <div class="project-description">
-                    ici Desciprition
+                    {{project_description}}
                 </div>
             </div>
         </div>
+
         <button class="right" (click)="nextProject()">➡️</button>
     </div>
 </div>
