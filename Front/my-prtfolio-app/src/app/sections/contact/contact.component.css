@@ -1,13 +1,69 @@
-#contact-component {
+/* #contact-component {
   color: white;
   margin-top: 15px;
   height: 90vh;
   padding: 15px;
-  /* background-color: rgb(22, 155, 203); */
   border: solid rgb(9, 77, 194);
   border-radius: 10px;
 }
 
 p {
   text-align: center;
+} */
+/* Style global du footer */
+.component__style.contact-component {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+   background-color: #4b0082; 
+}
+
+/* Conteneur du footer */
+.component__description {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px; /* Largeur maximale du footer */
+  
+}
+
+/* Style des liens ou des sections */
+#contact-component {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Style de chaque élément */
+.con1,
+.con2,
+.con3,
+.con4 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  /* background-color: #444;
+   */
+     color: white;
+  background-color: #251c3a;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+a {
+    text-decoration: none; /* Supprimer le souligné */
+    color: inherit; /* Garder la couleur par défaut du texte (ou tu peux choisir une couleur spécifique comme #fff ou #ccc) */
+}
+/* Effet au survol */
+.con1:hover,
+.con2:hover,
+.con3:hover,
+.con4:hover {
+   background-color: #7e3ff2;
 }
