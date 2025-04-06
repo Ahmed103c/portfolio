@@ -5,6 +5,11 @@
   padding: 15px;
   border-radius: 10px;
 }
+.project-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  color: #f6c1fc;
+}
 .navigation {
   color: white;
   display: grid;
@@ -53,10 +58,62 @@
   overflow: hidden;
 }
 .project-name {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5em;
   grid-column: 2;
   grid-row: 1/2;
 }
 .project-description {
+  font-family: "Roboto", serif;
   grid-column: 2;
   grid-row: 2/4;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+/* Effet au survol */
+button:hover {
+  background-color: #7e3ff2;
+  transform: scale(1.1);
+}
+
+/* Style spécifique pour le bouton "Previous" */
+.img-left {
+  background-color: #6a0dad;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-left:hover {
+  background-color: #7e3ff2;
+}
+
+/* Style spécifique pour le bouton "Next" */
+.img-right {
+  background-color: #4b0082;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-right:hover {
+  background-color: #6a0dad;
+}
+
+/* Alignement centré */
+button {
+  display: inline-block;
+  text-align: center;
+}
+
+button:focus {
+  outline: none; /* Pour enlever la bordure par défaut quand on clique */
 }
