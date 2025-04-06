@@ -4,8 +4,10 @@
   padding: 15px;
   border-radius: 10px;
 }
-p {
-  text-align: center;
+.education-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  color: #f6c1fc;
 }
 * {
   box-sizing: border-box;

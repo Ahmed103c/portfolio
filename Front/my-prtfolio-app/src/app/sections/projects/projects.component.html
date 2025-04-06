@@ -1,5 +1,8 @@
 <div id="projects-component">
-    Personal-Projects<br><br>
+    <div class="project-title">
+        Personal-Projects
+    </div>
+    <br><br>
     <div class="navigation">
         <button class="left" (click)="previousProject()">⬅️</button>
         <div class="card-project">
@@ -10,7 +13,6 @@
                     <button class="img-right" (click)="nextImg()">Next</button>
                 </div>
                 <div class="project-name">
-                    <!-- {{ projects[currentIndex] }} -->
                     {{project_name}}
                 </div>
                 <div class="project-description">
