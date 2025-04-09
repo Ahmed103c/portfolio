@@ -61,4 +61,30 @@ export class ProjectsComponent {
         this.current_img_index
       ];
   }
+
+  private lastScrollY: number = window.scrollY;
+
+  constructor() {
+    this.initObserver();
+  }
+
+  private initObserver(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > this.lastScrollY;
+        this.lastScrollY = currentScrollY;
+
+        if (entry.isIntersecting && scrollingDown) {
+          (entry.target as HTMLElement).classList.add('show');
+        }
+      });
+    });
+
+    const section = document.querySelector('#projects-component');
+    if (section) {
+      observer.observe(section);
+    }
+  }
 }
+new ProjectsComponent();
