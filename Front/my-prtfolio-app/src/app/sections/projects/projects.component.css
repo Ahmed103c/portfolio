@@ -1,4 +1,5 @@
 #projects-component {
+  border: solid black;
   color: white;
   margin-top: 15px;
   height: 90vh;
@@ -45,12 +46,20 @@
   padding: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(3, 150px) auto;
+  grid-template-rows: 80px 150px auto;
   gap: 10px;
 }
 .project-photo {
+  border: solid black;
   grid-column: 1;
   grid-row: 1/7;
+}
+.project-photo video {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* ou plus si tu veux */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .project-photo img {
   max-width: 100%;
@@ -58,15 +67,59 @@
   overflow: hidden;
 }
 .project-name {
+  border: solid black;
   font-family: "Playfair Display", serif;
   font-size: 2.5em;
   grid-column: 2;
   grid-row: 1/2;
 }
 .project-description {
+  padding: 10px;
+  border: solid black;
   font-family: "Roboto", serif;
   grid-column: 2;
-  grid-row: 2/4;
+  grid-row: 2/3;
+}
+.project-techno {
+  padding: 10px;
+  border: solid black;
+  font-family: "Roboto", serif;
+  grid-column: 2;
+  grid-row: 3/4;
+  text-align: left;
+  align-items: left;
+  /* Utilisation de Flexbox pour gérer l'affichage */
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+  gap: 10px; /* Espacement entre les éléments */
+  justify-content: flex-start; /* Aligne les éléments à gauche */
+
+  /* Ajouter un peu de hauteur ou de largeur fixe si nécessaire */
+  width: 100%; /* Prendre toute la largeur disponible */
+  max-width: 100%; /* Pour éviter le débordement */
+}
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacement entre l'icône et le texte */
+  flex-wrap: wrap; /* Permet de faire passer les éléments sur la ligne suivante si nécessaire */
+  max-width: calc(
+    33.33% - 10px
+  ); /* Limite la largeur des éléments à un tiers de la largeur du conteneur avec un écart de 10px */
+}
+.project-link {
+  padding: 10px;
+  border: solid black;
+  font-family: "Roboto", serif;
+  grid-column: 2;
+  grid-row: 4/5;
+  display: grid;
+  text-align: left;
+  align-items: left;
+}
+.project-link img {
+  grid-column: 1;
+  grid-row: 1;
 }
 button {
   padding: 10px 20px;
@@ -81,7 +134,25 @@ button {
   display: inline-block;
   margin: 5px 10px;
 }
+.button-link {
+  height: 40%;
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #894caf; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Supprimer le soulignement du lien */
+  border-radius: 5px; /* Coins arrondis */
+  border: none; /* Supprimer la bordure */
+  cursor: pointer; /* Changer le curseur en pointeur */
+}
 
+.button-link:hover {
+  background-color: #45a049; /* Changer la couleur du bouton au survol */
+}
 /* Effet au survol */
 button:hover {
   background-color: #7e3ff2;

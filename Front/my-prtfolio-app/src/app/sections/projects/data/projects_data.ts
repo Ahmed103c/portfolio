@@ -2,35 +2,94 @@ export const projects = [
   {
     name: 'Wealthwise',
     description:
-      'A financial management app powered by AI to help users with budgeting and investment decisions.',
-    photo: [
-      'images/WealthWise/img_WealthWise_01.png',
-      'images/WealthWise/img_WealthWise_02.png',
-      'images/WealthWise/img_WealthWise_03.png',
+      'Application bancaire centralisée permettant de gérer l’ensemble de ses comptes depuis une seule interface. Elle offre des statistiques financières détaillées et intègre un chatbot pour fournir des conseils personnalisés ',
+    photo: ['images/WealthWise/vid_wealthwise.mp4'],
+    link: 'https://github.com/Ahmed103c/WealthWise',
+    techno: [
+      {
+        name: 'Angular',
+        icon: 'https://img.icons8.com/?size=100&id=71257&format=png&color=000000',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000',
+      },
+      {
+        name: 'Spring Boot',
+        icon: 'https://img.icons8.com/?size=100&id=90519&format=png&color=000000',
+      },
+      {
+        name: 'PostgreSQL',
+        icon: 'https://img.icons8.com/?size=100&id=38561&format=png&color=000000',
+      },
     ],
   },
   {
     name: 'MyFilm',
-    description: 'An app to track and review your favorite movies and shows.',
-    photo: [
-      '/images/Myfilm/img_myFilm_01.png',
-      '/images/Myfilm/img_myFilm_02.png',
+    description:
+      'Plateforme web dédiée à l’hébergement et à la gestion de films, intégrant des API externes pour l’importation automatique de contenus variés.',
+    photo: ['/images/Myfilm/vid_myFilm.mp4'],
+    link: 'https://github.com/Ahmed103c/MyFilm',
+    techno: [
+      {
+        name: '.NET C#',
+        icon: 'https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000',
+      },
+      {
+        name: 'Blazor',
+        icon: 'https://img.icons8.com/?size=100&id=iucnc54epl0f&format=png&color=000000',
+      },
+      {
+        name: 'SQLite',
+        icon: 'https://img.icons8.com/?size=100&id=VMRAbKfEzssG&format=png&color=000000',
+      },
     ],
   },
   {
     name: 'Beesim',
-    description: 'Multiagent Simulation',
-    photo: ['images/BeeSim/img_beesim_01.png'],
+    description:
+      'Simulation multi-agents représentant l’interaction entre deux ruches d’abeilles, avec modélisation de comportements variés et dynamiques.',
+    photo: ['images/BeeSim/vid_beesim.mp4'],
+    link: 'https://github.com/Ahmed103c/BeeSim',
+    techno: [
+      {
+        name: 'java & javaFX',
+        icon: 'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
+      },
+    ],
   },
   {
     name: 'Immolink',
-    description: 'A platform to connect residents and neighbors in a building.',
-    photo: ['images/Immolink/img_Immolink_01.png'],
+    description:
+      'Prototype d’application web réalisé lors du Hackathon Sopra Steria, visant à simuler les interactions sociales et les liens de voisinage au sein d’une communauté.',
+    photo: ['images/Immolink/vid_immolink.mp4'],
+    techno: [
+      {
+        name: 'HTML',
+        icon: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
+      },
+      {
+        name: 'CSS',
+        icon: 'https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000',
+      },
+      {
+        name: 'JavaScript',
+        icon: 'https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000',
+      },
+    ],
+    link: 'https://github.com/Ahmed103c/Hackathon_2024_Sopra_Steria',
   },
   {
     name: 'Evac',
     description:
-      "Scientific Simulation that analyzes the crowd's mouvement in an emergency situation",
-    photo: ['images/evac/img_evac_01.png', 'images/evac/img_evac_02.png'],
+      'Simulation scientifique du mouvement de foule en situation d’évacuation d’urgence, basée sur des modèles comportementaux réalistes.',
+    photo: ['images/evac/vid_evac.mp4'],
+    techno: [
+      {
+        name: 'Python',
+        icon: 'https://img.icons8.com/?size=100&id=Rc0Xn5AtE8kX&format=png&color=000000',
+      },
+    ],
+    link: 'https://github.com/Ahmed103c/Evac_Mvt_Foule',
   },
 ];

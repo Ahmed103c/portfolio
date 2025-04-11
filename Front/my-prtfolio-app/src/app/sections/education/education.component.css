@@ -1,6 +1,7 @@
 #education-component {
+  border: red solid;
   margin-top: 15px;
-  height: 90vh;
+  /* height: 90vh; */
   padding: 15px;
   border-radius: 10px;
 }
@@ -61,6 +62,23 @@
   width: 50%;
   animation: movedown 1s linear forwards;
   opacity: 0;
+}
+.education-section-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  /* max-width: 10px; /* adapte selon ce qui te paraît bien */
+  /* max-height: 10px; */
+  /* width: auto;
+  height: auto; */
+}
+.education-section-logo img {
+  max-width: 150px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  /* object-fit: contain; garde les proportions et évite les déformations */
 }
 @keyframes movedown {
   0% {

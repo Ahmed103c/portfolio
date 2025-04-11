@@ -1,31 +1,34 @@
 .component__style.contact-component {
+  border: solid black;
   width: 100%;
   padding: 10px 20px;
+  /* margin-top: 100%; */
+  margin-bottom: 0;
+  /* bottom: 0; */
   background-color: #333;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
+  /* position: fixed; */
+  /* position: sticky; */
   background-color: #4b0082;
 }
 
-/* Conteneur du footer */
 .component__description {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 1200px; /* Largeur maximale du footer */
+  max-width: 1200px;
 }
 
-/* Style des liens ou des sections */
 #contact-component {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-/* Style de chaque élément */
 .con1,
 .con2,
 .con3,
@@ -34,8 +37,6 @@
   font-weight: bold;
   padding: 10px 20px;
   text-align: center;
-  /* background-color: #444;
-   */
   color: white;
   background-color: #251c3a;
   border-radius: 5px;
@@ -43,10 +44,10 @@
   cursor: pointer;
 }
 a {
-  text-decoration: none; /* Supprimer le souligné */
-  color: inherit; /* Garder la couleur par défaut du texte (ou tu peux choisir une couleur spécifique comme #fff ou #ccc) */
+  text-decoration: none;
+  color: inherit;
 }
-/* Effet au survol */
+
 .con1:hover,
 .con2:hover,
 .con3:hover,

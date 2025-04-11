@@ -1,4 +1,5 @@
 #experience-component {
+  border: rgb(21, 0, 255) solid;
   color: linear-gradient(180deg, #000028 0%, #00557c 100%);
   margin-top: 15px;
   height: 90vh;
@@ -85,7 +86,7 @@
 }
 @keyframes changeColor {
   0% {
-    color: #00e6dc;
+    color: blueviolet;
   }
   25% {
     color: #0ee7ad;
@@ -97,7 +98,7 @@
     color: #0ee7ad;
   }
   100% {
-    color: #00e6dc;
+    color: blueviolet;
   }
 }
 

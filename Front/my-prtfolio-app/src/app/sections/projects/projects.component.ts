@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, viewChild, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { projects } from './data/projects_data';
 
 @Component({
@@ -8,18 +8,22 @@ import { projects } from './data/projects_data';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef;
   projects_data = projects;
 
   current_project_index = 0;
-  current_img_index = 0;
+
   project_name = this.projects_data[this.current_project_index].name;
+
   project_description =
     this.projects_data[this.current_project_index].description;
-  project_photo =
-    this.projects_data[this.current_project_index].photo[
-      this.current_img_index
-    ];
+
+  project_photo = this.projects_data[this.current_project_index].photo;
+
+  project_link = this.projects_data[this.current_project_index].link;
+
+  project_techno = this.projects_data[this.current_project_index].techno;
 
   previousProject() {
     this.current_project_index =
@@ -37,54 +41,27 @@ export class ProjectsComponent {
   update_project(project: any) {
     this.project_name = project[this.current_project_index].name;
     this.project_description = project[this.current_project_index].description;
-    this.current_img_index = 0;
-    this.project_photo =
-      project[this.current_project_index].photo[this.current_img_index];
+    this.project_link = project[this.current_project_index].link;
+    this.project_photo = project[this.current_project_index].photo;
+    this.project_techno = project[this.current_project_index].techno;
   }
-
-  previousImg() {
-    let photo_length =
-      this.projects_data[this.current_project_index].photo.length;
-    this.current_img_index =
-      (this.current_img_index - 1 + photo_length) % photo_length;
-    this.project_photo =
-      this.projects_data[this.current_project_index].photo[
-        this.current_img_index
-      ];
-  }
-  nextImg() {
-    let photo_length =
-      this.projects_data[this.current_project_index].photo.length;
-    this.current_img_index = (this.current_img_index + 1) % photo_length;
-    this.project_photo =
-      this.projects_data[this.current_project_index].photo[
-        this.current_img_index
-      ];
-  }
-
-  private lastScrollY: number = window.scrollY;
-
-  constructor() {
-    this.initObserver();
-  }
-
-  private initObserver(): void {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const currentScrollY = window.scrollY;
-        const scrollingDown = currentScrollY > this.lastScrollY;
-        this.lastScrollY = currentScrollY;
-
-        if (entry.isIntersecting && scrollingDown) {
-          (entry.target as HTMLElement).classList.add('show');
-        }
-      });
-    });
-
-    const section = document.querySelector('#projects-component');
-    if (section) {
-      observer.observe(section);
-    }
+  ngAfterViewInit() {
+    // Petite attente pour laisser Angular tout charger
+    setTimeout(() => {
+      const video = this.videoPlayer?.nativeElement;
+      if (video) {
+        video.muted = true; // encore une fois on assure
+        video.autoplay = true;
+        video.load(); // recharge
+        video
+          .play()
+          .then(() => {
+            console.log('Lecture vidéo démarrée');
+          })
+          .catch((err: any) => {
+            console.warn('Lecture bloquée :', err);
+          });
+      }
+    }, 200); // parfois 100ms c'est trop court
   }
 }
-new ProjectsComponent();

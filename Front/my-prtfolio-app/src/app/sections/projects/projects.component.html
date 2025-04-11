@@ -8,15 +8,27 @@
         <div class="card-project">
             <div class="card-project-inner-grid">
                 <div class="project-photo">
-                    <img [src]="project_photo" alt="photo">
-                    <button class="img-left" (click)="previousImg()">Previous</button>
-                    <button class="img-right" (click)="nextImg()">Next</button>
+                    <video #videoPlayer [src]="project_photo" width="640" height="360" autoplay loop muted playsinline>
+                        <!-- <source [src]="project_photo" type="video/mp4"> -->
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
                 </div>
                 <div class="project-name">
                     {{project_name}}
+
                 </div>
                 <div class="project-description">
                     {{project_description}}
+                </div>
+                <div class="project-techno">
+                    <div *ngFor="let tech of project_techno" class="tech-item">
+                        <span>{{ tech.name }}</span>
+                        <img [src]="tech.icon" [alt]="tech.name" width="30" height="30" />
+                    </div>
+                </div>
+                <div class="project-link">
+                    <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="github Logo">
+                    <a href="{{project_link}}" target="_blank" class="button-link"> GitHub repository </a>
                 </div>
             </div>
         </div>
