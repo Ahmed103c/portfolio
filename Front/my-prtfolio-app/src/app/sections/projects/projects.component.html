@@ -8,7 +8,8 @@
         <div class="card-project">
             <div class="card-project-inner-grid">
                 <div class="project-photo">
-                    <video #videoPlayer [src]="project_photo" width="640" height="360" autoplay loop muted playsinline>
+                    <video #videoPlayer [attr.src]="project_photo" width="640" height="360" autoplay preload="metadata"
+                        loop muted playsinline>
                         <!-- <source [src]="project_photo" type="video/mp4"> -->
                         Votre navigateur ne supporte pas la balise vidéo.
                     </video>

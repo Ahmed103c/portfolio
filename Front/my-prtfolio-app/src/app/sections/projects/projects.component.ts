@@ -52,7 +52,7 @@ export class ProjectsComponent implements AfterViewInit {
       if (video) {
         video.muted = true; // encore une fois on assure
         video.autoplay = true;
-        video.load(); // recharge
+        //video.load(); // recharge
         video
           .play()
           .then(() => {

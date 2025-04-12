@@ -49,7 +49,7 @@ export const projects = [
     name: 'Beesim',
     description:
       'Simulation multi-agents représentant l’interaction entre deux ruches d’abeilles, avec modélisation de comportements variés et dynamiques.',
-    photo: ['images/BeeSim/vid_beesim.mp4'],
+    photo: ['images/BeeSim/vid_beesim.webm'],
     link: 'https://github.com/Ahmed103c/BeeSim',
     techno: [
       {
