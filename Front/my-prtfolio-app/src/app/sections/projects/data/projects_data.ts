@@ -62,7 +62,9 @@ export const projects = [
     name: 'Immolink',
     description:
       'Prototype d’application web réalisé lors du Hackathon Sopra Steria, visant à simuler les interactions sociales et les liens de voisinage au sein d’une communauté.',
-    photo: ['images/Immolink/vid_immolink.mp4'],
+    photo: [
+      'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475579/djt05nskijkpogjgqkbg.webm',
+    ],
     techno: [
       {
         name: 'HTML',
