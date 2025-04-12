@@ -3,7 +3,9 @@ export const projects = [
     name: 'Wealthwise',
     description:
       'Application bancaire centralisée permettant de gérer l’ensemble de ses comptes depuis une seule interface. Elle offre des statistiques financières détaillées et intègre un chatbot pour fournir des conseils personnalisés ',
-    photo: ['images/WealthWise/vid_wealthwise.mp4'],
+    photo: [
+      'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475731/lch8veyuvdgpt5dqiqvo.webm',
+    ],
     link: 'https://github.com/Ahmed103c/WealthWise',
     techno: [
       {
@@ -28,7 +30,9 @@ export const projects = [
     name: 'MyFilm',
     description:
       'Plateforme web dédiée à l’hébergement et à la gestion de films, intégrant des API externes pour l’importation automatique de contenus variés.',
-    photo: ['/images/Myfilm/vid_myFilm.mp4'],
+    photo: [
+      'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475742/j2ewxku7hdj2hjx3jued.webm',
+    ],
     link: 'https://github.com/Ahmed103c/MyFilm',
     techno: [
       {
@@ -49,7 +53,9 @@ export const projects = [
     name: 'Beesim',
     description:
       'Simulation multi-agents représentant l’interaction entre deux ruches d’abeilles, avec modélisation de comportements variés et dynamiques.',
-    photo: ['images/BeeSim/vid_beesim.webm'],
+    photo: [
+      'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475735/s3ki1ajqd0itxhpemz0v.webm',
+    ],
     link: 'https://github.com/Ahmed103c/BeeSim',
     techno: [
       {
@@ -85,7 +91,9 @@ export const projects = [
     name: 'Evac',
     description:
       'Simulation scientifique du mouvement de foule en situation d’évacuation d’urgence, basée sur des modèles comportementaux réalistes.',
-    photo: ['images/evac/vid_evac.mp4'],
+    photo: [
+      'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475720/gh1sw35a645ikmon0fwy.webm',
+    ],
     techno: [
       {
         name: 'Python',
