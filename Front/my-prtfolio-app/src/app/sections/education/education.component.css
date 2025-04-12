@@ -1,6 +1,4 @@
 #education-component {
-  margin-top: 15px;
-  /* height: 90vh; */
   padding: 15px;
   border-radius: 10px;
 }
@@ -51,9 +49,6 @@
   top: 11px;
 }
 .education-section {
-  font-size: 1.5em;
-  font-family: "Roboto", serif;
-  color: white;
   padding: 10px;
   border-radius: 15px;
   background-color: #4b0082;
@@ -62,6 +57,27 @@
   animation: movedown 1s linear forwards;
   opacity: 0;
 }
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
+  color: #f6c1fc;
+}
+.date_localisation {
+  font-family: "Roboto", serif;
+  color: white;
+}
+.type-institut {
+  font-family: "Roboto", serif;
+  color: #f6c1fc;
+}
+.description {
+  font-family: "Roboto", serif;
+  color: white;
+}
+strong {
+  color: black;
+}
+
 .education-section-logo {
   position: absolute;
   top: 0;

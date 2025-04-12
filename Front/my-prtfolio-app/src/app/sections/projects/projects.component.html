@@ -22,6 +22,7 @@
                     {{project_description}}
                 </div>
                 <div class="project-techno">
+                    <div class="tech-title">Technologies utilisées :</div>
                     <div *ngFor="let tech of project_techno" class="tech-item">
                         <span>{{ tech.name }}</span>
                         <img [src]="tech.icon" [alt]="tech.name" width="30" height="30" />

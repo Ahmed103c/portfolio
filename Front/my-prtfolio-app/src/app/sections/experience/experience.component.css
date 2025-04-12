@@ -1,4 +1,5 @@
 #experience-component {
+  margin: 15px;
   color: linear-gradient(180deg, #000028 0%, #00557c 100%);
   margin-top: 15px;
   height: 90vh;
@@ -7,22 +8,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
-  /* animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%; */
 }
-/* @keyframes appear {
-  0% {
-    opacity: 0;
-    scale: 0.2%;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-} */
+
 .expirence-title {
-  /* border: solid black; */
   font-family: "Playfair Display", serif;
   font-size: 3em;
   color: #000028;
@@ -53,15 +41,21 @@
   grid-column: 3;
   grid-row: 1/10;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .skill-title {
   font-family: "Playfair Display", serif;
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 .skill-tree ul {
   list-style-type: none;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-decoration: none;
+  display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  gap: 10px; /* Espacement vertical entre les éléments */
 }
 .experience-description {
   /* text-align: center; */
