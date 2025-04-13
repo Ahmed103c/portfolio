@@ -113,3 +113,54 @@
     transform: translate(1px, -1px);
   }
 }
+@media (max-width: 768px) {
+  #experience-component {
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(180deg, #00ffb9, #00e6dc 100%);
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .company-logo {
+    grid-column: auto;
+    font-size: 1.5em;
+  }
+
+  .company-name {
+    font-size: 2em;
+  }
+
+  .experience-description {
+    grid-column: auto;
+    font-size: 1.1em;
+    padding-top: 10px;
+  }
+
+  .skill-tree {
+    grid-column: auto;
+    grid-row: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-title {
+    font-size: 1.5em;
+  }
+
+  .skill-tree ul {
+    font-size: 1.1em;
+    align-items: center;
+  }
+
+  .company-location {
+    grid-column: auto;
+    grid-row: auto;
+    font-size: 1em;
+  }
+}

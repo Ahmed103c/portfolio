@@ -1,5 +1,6 @@
 <nav>
-    <ul >
+    <button class="burger" id="burger" (click)="toggleMenu()">&#9776;</button> <!-- ☰ -->
+    <ul [class.active]="isMenuOpen">
         <li><a href="#presentation-component"> Acceuil</a></li>
         <li><a href="#projects-component">Projets</a></li>
         <li><a href="#experience-component">Expérience</a></li>

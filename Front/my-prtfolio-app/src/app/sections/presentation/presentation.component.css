@@ -109,3 +109,57 @@
     color: blueviolet;
   }
 }
+@media (max-width: 768px) {
+  #presentation-component {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  .personal-photo {
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .personal-photo img {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .welcome {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+  }
+
+  .personal-name h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .greetings-detail {
+    font-size: 1.1em;
+  }
+
+  .personal-debrief {
+    grid-column: 1;
+    grid-row: auto;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .arrow-container {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 20px;
+  }
+
+  .arrow span {
+    width: 30px;
+    height: 30px;
+  }
+}

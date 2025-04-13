@@ -25,7 +25,6 @@
   animation: moveline s linear forwards;
 }
 .arrow1 {
-  /* display : inline-block; */
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
@@ -37,7 +36,6 @@
   top: 11px;
 }
 .arrow2 {
-  /* display : inline-block; */
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
@@ -83,17 +81,12 @@ strong {
   top: 0;
   right: 0;
   padding: 10px;
-  /* max-width: 10px; /* adapte selon ce qui te paraît bien */
-  /* max-height: 10px; */
-  /* width: auto;
-  height: auto; */
 }
 .education-section-logo img {
   max-width: 150px;
   max-height: 100px;
   width: auto;
   height: auto;
-  /* object-fit: contain; garde les proportions et évite les déformations */
 }
 @keyframes movedown {
   0% {
@@ -118,8 +111,6 @@ strong {
   animation-delay: 3s;
 }
 .education-section.left {
-  /* border: solid white; */
-  /* margin-right: 10px; */
   left: -20px;
 }
 
@@ -132,5 +123,80 @@ strong {
   }
   100% {
     height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #education-component {
+    padding: 10px;
+  }
+
+  .education-title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .education-timeline {
+    margin: 50px auto;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .education-timeline::after {
+    display: none;
+  }
+
+  .education-section {
+    width: 100%; /* Faire en sorte que chaque section prenne toute la largeur */
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .arrow1,
+  .arrow2 {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #4b0082;
+    border-right: 10px solid #4b0082;
+    top: 7px;
+  }
+
+  .education-section-logo img {
+    max-width: 120px; /* Réduire la taille du logo */
+    max-height: 80px;
+  }
+
+  .education-section.left {
+    left: 0;
+    position: relative;
+  }
+
+  .education-section.right {
+    left: 0;
+    position: relative;
+  }
+
+  .title {
+    font-size: 1.3em; /* Ajuster la taille du titre */
+  }
+
+  .date_localisation,
+  .type-institut,
+  .description {
+    font-size: 1em;
+  }
+
+  .education-section:nth-child(1),
+  .education-section:nth-child(2),
+  .education-section:nth-child(3),
+  .education-section:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+
+  .education-section:nth-child(2),
+  .education-section:nth-child(3),
+  .education-section:nth-child(4) {
+    animation-delay: 1s;
   }
 }
