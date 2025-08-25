@@ -24,19 +24,20 @@ import 'aos/dist/aos.css'; // Importation des styles AOS
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], // Assure-toi de bien mettre 'styleUrls' au lieu de 'styleUrl'
 })
-export class AppComponent implements OnInit {
+// export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'my-prtfolio-app';
 
-  ngOnInit() {
-    AOS.init({
-      duration: 1200, // Durée de l'animation
-      easing: 'ease-in-out', // Easing de l'animation
-      once: false, // L'animation se déclenche une seule fois lors du premier passage
-      mirror: true, // L'animation est réversible lorsque l'utilisateur fait défiler la page vers le bas
-      offset: 200, // L'animation commence lorsqu'on est à 200px de l'élément
-      //delay: 200, // Délai avant que l'animation commence
-    });
-  }
+  // ngOnInit() {
+  //   AOS.init({
+  //     duration: 1200, // Durée de l'animation
+  //     easing: 'ease-in-out', // Easing de l'animation
+  //     once: false, // L'animation se déclenche une seule fois lors du premier passage
+  //     mirror: true, // L'animation est réversible lorsque l'utilisateur fait défiler la page vers le bas
+  //     offset: 200, // L'animation commence lorsqu'on est à 200px de l'élément
+  //     //delay: 200, // Délai avant que l'animation commence
+  //   });
+  // }
   // ngAfterViewChecked() {
   //   AOS.refresh(); // Rafraîchit les animations au fur et à mesure du défilement
   // }
