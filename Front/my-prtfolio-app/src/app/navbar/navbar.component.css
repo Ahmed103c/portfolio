@@ -75,7 +75,7 @@ nav ul li a:hover {
 } */
 /* --- NAVIGATION STANDARD --- */
 nav {
-  background-color: #4b0082;
+  background: linear-gradient(90deg, #000000 5%, #2e014a 100%);
   width: 100%;
   margin: auto;
   padding: 10px 20px;
@@ -110,7 +110,7 @@ nav ul li a {
   font-size: 1em;
   font-family: "Roboto", serif;
   color: white;
-  background-color: #251c3a;
+  /* background-color: #251c3a; */
   text-decoration: none;
   transition: background-color 0.3s ease;
 }

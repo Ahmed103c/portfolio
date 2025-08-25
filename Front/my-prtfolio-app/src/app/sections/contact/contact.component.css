@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4b0082;
+  background: linear-gradient(90deg, #000000 5%, #150022 95%);
 }
 
 .component__description {
@@ -32,7 +32,7 @@
   padding: 10px 20px;
   text-align: center;
   color: white;
-  background-color: #251c3a;
+  /* background-color: #251c3a; */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -46,7 +46,7 @@ a {
 .con2:hover,
 .con3:hover,
 .con4:hover {
-  background-color: #7e3ff2;
+  background-color: #150022;
 }
 .con1 {
   position: relative;
@@ -55,7 +55,7 @@ a {
 .tooltip-email {
   visibility: hidden;
   font-family: "Roboto", serif;
-  background-color: #7e3ff2;
+  background-color: #150022;
   font-size: 1.5em;
   color: #fff;
   text-align: center;
@@ -117,7 +117,7 @@ a {
   .con2:hover,
   .con3:hover,
   .con4:hover {
-    background-color: #7e3ff2;
+    background-color: #150022;
   }
 
   .con1 {
@@ -127,7 +127,7 @@ a {
   .tooltip-email {
     visibility: hidden;
     font-family: "Roboto", serif;
-    background-color: #7e3ff2;
+    background-color: #150022;
     font-size: 1.2em;
     color: #fff;
     text-align: center;

@@ -9,20 +9,45 @@
   grid-template-rows: 50px 120px auto;
   gap: 15px;
 }
-.personal-photo {
+/* .personal-photo {
   grid-column: 1/2;
   grid-row: 1/4;
   padding: 10px;
   display: flex;
   justify-content: left;
   align-items: left;
+} */
+.personal-photo {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* centrer horizontalement */
+  align-items: center;     /* centrer verticalement */
 }
+
 .personal-photo img {
+  width: 400px;
   height: 100%;
-  max-width: 400px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
+  background: linear-gradient(90deg, #f42d75 0%, #8627ff 100%);
+  padding: 6px; /* espace pour le gradient */
+  box-sizing: border-box;
+  /* Utilisation d'un pseudo-élément pour le gradient circulaire */
+  position: relative;
+  z-index: 1;
+}
+
+.personal-photo img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(90deg, #f42d75 0%, #8627ff 100%);
+  z-index: -1;
 }
 
 .welcome {
