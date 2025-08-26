@@ -8,6 +8,7 @@ import { EducationComponent } from './sections/education/education.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import AOS from 'aos'; // Importation correcte de AOS
 import 'aos/dist/aos.css'; // Importation des styles AOS
+import { NewTemplateComponent } from './sections/new-template/new-template.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import 'aos/dist/aos.css'; // Importation des styles AOS
     ExperienceComponent,
     EducationComponent,
     ContactComponent,
+    NewTemplateComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], // Assure-toi de bien mettre 'styleUrls' au lieu de 'styleUrl'

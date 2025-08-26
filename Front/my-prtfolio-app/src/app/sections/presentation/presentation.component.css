@@ -5,18 +5,10 @@
   padding: 15px;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 120px auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 15px;
 }
-/* .personal-photo {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  padding: 10px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-} */
 .personal-photo {
   grid-column: 1/2;
   grid-row: 1/4;
@@ -25,72 +17,135 @@
   justify-content: center; /* centrer horizontalement */
   align-items: center;     /* centrer verticalement */
 }
-
 .personal-photo img {
   width: 400px;
   height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  background: linear-gradient(90deg, #f42d75 0%, #8627ff 100%);
-  padding: 6px; /* espace pour le gradient */
+  background: conic-gradient(from var(--angle), #f42d75, #8627ff, #f42d75);
+  padding: 10px; 
   box-sizing: border-box;
-  /* Utilisation d'un pseudo-élément pour le gradient circulaire */
+ 
   position: relative;
   z-index: 1;
+  animation: gradientMove 4s linear infinite;
 }
-
-.personal-photo img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  padding: 6px;
-  background: linear-gradient(90deg, #f42d75 0%, #8627ff 100%);
-  z-index: -1;
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-
-.welcome {
-  grid-column: 2/4;
-  grid-row: 1/3;
-  padding: 10px;
-}
-
-@keyframes slideIn {
+@keyframes gradientMove {
   from {
-    transform: translateX(100%);
+    --angle: 0deg;
   }
   to {
-    transform: translateX(0);
+    --angle: 360deg;
+  }
+}
+.welcome {
+  /* border: solid red; */
+  grid-column: 2/6;
+  grid-row: 1/4;
+  padding: 10px;
+  display: grid;
+  grid-template-columns:repeat(5, 1fr) ;
+  /* grid-template-rows: repeat(4, 1fr); */
+
+  gap: 2px;
+
+}
+.greetings-detail {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  font-family: "Roboto", serif;
+  font-size: 1.3em;
+  /* border: solid pink; */
+  letter-spacing: 10px;
+}
+/* .greetings-detail span {
+  color: blueviolet;
+} */
+.job-title {
+  grid-column: 1/6;
+  grid-row: 2/3;
+  font-family: "Roboto", serif;
+  font-size: 3em;
+  /* border: solid pink; */
+  color: white;
+  font-weight: 500;
+}
+.personal-name {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  /* border: solid pink; */
+  padding: 18px 60px;
+  border-radius: 20px; /* More rounded corners */
+  background: linear-gradient(90deg, #f42d75, #8627ff,#f42d75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size:400% 400%;
+  animation: gradient-change-horz 12s ease-in-out infinite;
+}
+
+@keyframes gradient-change-horz {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.greetings-detail {
-  font-family: "Roboto", serif;
-  font-size: 1.3em;
-}
-.greetings-detail span {
-  color: blueviolet;
-}
 .personal-name h1 {
-  text-align: left;
-  font-size: 4em;
-  color: #fae3e3;
+  font-size: 2em;
+  color: white;
   letter-spacing: 1px;
-  font-family: "Playfair Display", serif;
-  font-weight: 550;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  margin: 0; /* Remove default margin */
+  background: none; /* Remove background from h1 */
+  border-radius: 12px; /* Slight rounding for h1 if needed */
+  text-align: center;
+  padding: 8px 24px; 
 }
 
+
+
 .personal-debrief {
+  grid-column: 1/5;
+  grid-row: 5/5;
+  /* border: solid pink; */
   padding: 10px;
-  grid-column: 2/5;
-  grid-row: 3/4;
+
   font-family: "Roboto", serif;
   font-size: 1.5em;
 }
-.personal-debrief span {
-  color: blueviolet;
+
+.personal-debrief::before {
+  content: "";
+  display: block;
+  border-top: 2px solid white;
+  margin: 0 auto 12px auto; /* Ajoute un espace de 12px au-dessus */
+  width: 100%;
 }
+
+
+
+/* .personal-debrief span {
+  color: blueviolet;
+} */
 .cen {
   text-align: center;
 }
