@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './new-template.component.css'
 })
 export class NewTemplateComponent {
-
+  
+  openId: number | null = null;
+  toggleDescription(id: number): void {
+    if (this.openId === id) {
+      this.openId = null; // Close if the same icon is clicked
+    } else {
+      this.openId = id; // Open the clicked icon
+    }
+  }
 }

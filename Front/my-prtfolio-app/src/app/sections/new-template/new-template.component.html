@@ -11,7 +11,7 @@
             </div>
             <div class="svg-icon-1">
                 <img src="images/config.svg" alt="" style="width:40px; height:40px;">
-                <div class="job-description">
+                <div class="job-description" [class.visible]="openId === 1">
                     <div class="job-description-title">
                         Ingénieur Automatisation logicielle
                     </div>
@@ -28,6 +28,9 @@
             <div class="job-company-place">
                 Siemens - lyon
             </div>
+            <button  class="savoir-plus-button" (click)="toggleDescription(1)">
+                {{ openId === 1 ? 'Fermer' : 'Savoir plus' }}
+            </button>
         </div>
  
         <div class="experience">
@@ -36,7 +39,7 @@
             </div>
             <div class="svg-icon-2">
                 <img src="images/backend.svg" alt="" style="width:40px; height:40px;">
-                    <div class="job-description">
+                    <div class="job-description" [class.visible]="openId === 2">
                         <div class="job-description-title">
                             Ingénieur Backend .Net
                         </div>
@@ -54,7 +57,9 @@
             <div class="job-company-place">
                 Michelin - Clermont Ferrand
             </div>
+            <button class="savoir-plus-button" (click)="toggleDescription(2)">
+                {{ openId === 2 ? 'Fermer' : 'Savoir plus' }}
+            </button>
         </div>
     </div>
-
 </div>
