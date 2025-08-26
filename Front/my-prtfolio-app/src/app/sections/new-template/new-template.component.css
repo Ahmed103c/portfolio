@@ -74,22 +74,35 @@
 
 .job-description{
   position: absolute;
-  bottom: 50%; /* au-dessus de l'icône */
-  left: 50%;
-  transform: translateX(-50%);
-  background: #454343;
+  text-align: left;
+  max-width: 300px;
+  bottom: 5%; 
+  left: 45%;
+  transform: translateX(-20%);
+
+  background : #2e014a;
   color: #fff;
   padding: 6px 10px;
   border-radius: 6px;
-  font-size: 2.4em;
-  white-space: nowrap;
+
   opacity: 0;
-  pointer-events: none; /* ne gêne pas la souris */
+  pointer-events: none; 
   transition: opacity 0.3s;
   z-index: 10;
 }
-
+.job-description-title{
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.job-description-work{
+  font-weight: 400;
+  font-size: 1em;
+}
 .svg-icon-1:hover .job-description{
+  opacity: 1;
+}
+.svg-icon-2:hover .job-description{
   opacity: 1;
 }
 
@@ -134,7 +147,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #ccc;
+  background-color: white;
   /* background : linear-gradient(90deg, #f42d75, #8627ff,#f42d75);
   background-size:400% 400%;
   animation: gradient-change-horz 12s ease-in-out infinite; */
