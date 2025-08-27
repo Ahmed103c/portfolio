@@ -7,9 +7,10 @@
   border-radius: 10px;
 }
 .project-title {
-  font-family: "Playfair Display", serif;
-  font-size: 3em;
-  color: #fae3e3;
+  font-family: "Roboto", serif;
+  font-size: 2.4em;
+  font-weight: 600;
+  color: white;
 }
 .navigation {
   color: white;
@@ -69,9 +70,33 @@
   justify-content: center;
   font-family: "Playfair Display", serif;
   font-size: 3.5em;
-  color: blueviolet;
+  /* color: blueviolet; */
   grid-column: 2;
   grid-row: 1/2;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f42d75, #8627ff, #f42d75);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+  animation: gradient-change-horz 8s ease-in-out infinite;
+}
+@keyframes gradient-change-horz {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .project-description {
   padding: 10px;
@@ -109,21 +134,7 @@
   max-width: calc(33.33% - 10px);
 }
 
-.project-link {
-  padding: 10px;
-  font-family: "Roboto", serif;
-  grid-column: 2;
-  grid-row: 4/5;
-  display: grid;
-  text-align: left;
-  align-items: left;
-}
-.project-link img {
-  grid-column: 1;
-  grid-row: 1;
-  top: 0;
-  left: 0;
-}
+
 button {
   padding: 10px 20px;
   font-size: 1.2em;
@@ -137,22 +148,30 @@ button {
   display: inline-block;
   margin: 5px 10px;
 }
-.project-link a {
-  margin-top: 10px;
-  margin-left: -50px;
-  margin-right: 20px;
-  height: 40%;
+.project-link {
+  /* padding: 10px; */
+  font-family: "Roboto", serif;
   grid-column: 2;
+  grid-row: 4/5;
+  display: grid;
+  border: solid green;
+}
+/* .project-link img {
+  grid-column: 1;
   grid-row: 1;
-  display: inline-block;
-  padding: 10px 20px;
+  top: 0;
+  left: 0;
+} */
+.button-link{
+  margin: 10px 30px;
+  padding: 0 10px;
   font-size: 16px;
   text-align: center;
   background-color: blueviolet;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  border: none;
+  border: solid red;
 }
 
 .button-link:hover {

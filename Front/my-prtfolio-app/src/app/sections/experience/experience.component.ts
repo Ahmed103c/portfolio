@@ -8,4 +8,13 @@ import { Component} from '@angular/core';
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css',
 })
-export class ExperienceComponent {}
+export class ExperienceComponent {
+  openId: number | null = null;
+  toggleDescription(id: number): void {
+    if (this.openId === id) {
+      this.openId = null; // Close if the same icon is clicked
+    } else {
+      this.openId = id; // Open the clicked icon
+    }
+  }
+}
