@@ -1,0 +1,49 @@
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 100px 50px 300px 100px;
+    border: dashed red 2px;
+    color: white;
+}
+.projects-title{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 2em;
+}
+.projects-type{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 1000px 10px 10px;
+}
+.projects-type-1{
+    
+}
+.projects-type-2{
+    
+}
+.projects-type-3{
+    
+}
+.current-project-title{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 3em;
+    top: 50%;
+}
+.projects-durability{
+    grid-column: span 3;
+    grid-row: 4/5;
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 1.2rem;
+}
