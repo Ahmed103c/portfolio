@@ -11,7 +11,7 @@ import { Project } from './model/Project';
 export class NewTemplateComponent implements AfterViewInit {
   @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef;
   projects_data : Project[] = projects;
-  // project_types = ['web-app', 'simulation', 'up-coming'];
+
   progressColor = 'blue';
   current_project_type = 'web-app';
   current_project_name = '';
@@ -33,43 +33,43 @@ export class NewTemplateComponent implements AfterViewInit {
     console.log("Project name : ",this.current_project_name);
   }
 
-
-
-
-
+  video = this.videoPlayer?.nativeElement;
   ngOnInit(): void {
     this.animateProgress();
     this.setCurrentType(this.current_project_type);
+    this.video.pause();
   }
 
   ngAfterViewInit() {
-    // Petite attente pour laisser Angular tout charger
-    setTimeout(() => {
-      const video = this.videoPlayer?.nativeElement;
-      if (video) {
-        video.muted = true; // encore une fois on assure
-        video.autoplay = true;
-        //video.load(); // recharge
+  const video = this.videoPlayer?.nativeElement;
+  if (!video) return;
+
+  video.muted = true;
+  video.autoplay = false; 
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         video
           .play()
-          .then(() => {
-            console.log('Lecture vidéo démarrée');
-          })
-          .catch((err: any) => {
-            console.warn('Lecture bloquée :', err);
-          });
+          .then(() => console.log('Lecture vidéo démarrée'))
+          .catch((err: any) => console.warn('Lecture bloquée :', err));
+      } else {
+        video.pause();
       }
-    }, 200); // parfois 100ms c'est trop court
-  }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(video);
+}
 
   progress = 0;
   duration = 0;
-  // Quand la vidéo charge ses métadonnées (durée dispo)
+
   setDuration(video: HTMLVideoElement) {
     this.duration = video.duration;
   }
 
-  // À chaque update du temps courant
   updateProgress(video: HTMLVideoElement) {
     if (this.duration > 0) {
       this.progress = (video.currentTime / this.duration) * 100;
@@ -82,9 +82,9 @@ export class NewTemplateComponent implements AfterViewInit {
       if (this.progress < 100) {
         this.progress += 1;
       } else {
-        this.progress = 0; // recommence l’animation
+        this.progress = 0; 
       }
-    }, 10000); // 100 ms → incrémente de 1%
+    }, 10000); 
   }
 
 }

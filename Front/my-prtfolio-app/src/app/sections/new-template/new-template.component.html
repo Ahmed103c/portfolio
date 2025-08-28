@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360" autoplay preload="metadata"
+    <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360"  preload="metadata"
        loop muted playsinline class="background" 
        (loadedmetadata)="setDuration(videoPlayer)"
        (timeupdate)="updateProgress(videoPlayer)" >
