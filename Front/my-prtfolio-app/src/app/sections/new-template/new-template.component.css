@@ -1,49 +1,115 @@
 .projects-container {
+    margin-top: 50px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 100px 50px 300px 100px;
-    border: dashed red 2px;
+    /* border: dashed red 2px; */
     color: white;
+    padding-left: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 0.6;
 }
 .projects-title{
     grid-column: 1/-1;
     grid-row: 1/2;
     color: white;
     font-family:"Roboto", serif;
-    font-size: 2em;
+    font-size: 2.4em;
+    font-weight: 600;
 }
-.projects-type{
-    grid-column: 1/-1;
+.projects-menu{
+    grid-column: span 3;
     grid-row: 2/3;
-    color: white;
-    font-family:"Roboto", serif;
-    font-size: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 1000px 10px 10px;
+    padding-left: 10px;
 }
-.projects-type-1{
-    
-}
-.projects-type-2{
-    
-}
-.projects-type-3{
-    
-}
-.current-project-title{
-    grid-column: 1/-1;
-    grid-row: 3/4;
+.project-type{
+    all:unset;
+    cursor: pointer;
     color: white;
     font-family:"Roboto", serif;
-    font-size: 3em;
-    top: 50%;
+    font-weight: 600;
+    font-size: 1em;
+    border: white 2px solid;
+    padding: 10px 10px;
 }
+.project-type:hover {
+    background : linear-gradient(90deg, #f42d75, #8627ff);
+}
+
+.current-project-title{
+
+    padding-top: 100px;
+    padding-left: 20px;
+    grid-column: span 1;
+    grid-row: 3/4;
+    display: flex;  
+    flex-direction: column;  
+    gap:10px;
+}
+.current-project-name{
+    /* border: green 1px solid ; */
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 2em;
+    padding: 10px 10px;
+}
+.project-check{
+    all:unset;
+    cursor: pointer;
+    color: white;
+    font-family:"Roboto", serif;
+    font-size: 1em;
+    /* border: white 1px solid; */
+    padding: 10px 10px;
+    margin-right: 100px;
+
+}
+.project-check:hover {
+    background : linear-gradient(90deg, #f42d75, #8627ff);
+}
+
 .projects-durability{
-    grid-column: span 3;
+    grid-column: span 2;
     grid-row: 4/5;
+    padding-left: 10px;
     color: white;
     font-family:"Roboto", serif;
     font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.project-durability-type{
+
+}
+.project-durability-type-name{
+
+}
+.project-durability-type-progress-bar{
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background : linear-gradient(90deg, #f42d75, #8627ff);
+  transition: width 0.2s linear;
 }

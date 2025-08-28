@@ -2,18 +2,64 @@
     <div class="projects-title">
         Projects
     </div>
-    <div class="projects-type">
-        <button class="project-type-1">web developpement</button>
-        <button class="project-type-2">simulation</button>
-        <button class="project-type-3">upcoming</button>
+    <div class="projects-menu">
+        <div class="project-type" (click)="setCurrentType('web-app')">web developpement</div>
+        <div class="project-type" (click)="setCurrentType('simulation')">simulation</div>
+        <div class="project-type" (click)="setCurrentType('upcoming')">upcoming</div>
     </div>
     <div class="current-project-title">
-        Project1 name<br>
-        <button>check it out</button>
+        <div class="current-project-name">
+            {{current_project_name}}
+        </div>
+        <div class="project-check">
+            check it out
+        </div>
     </div>
+
     <div class="projects-durability">
-        Project1 name
-        Project2 name
-        project3 name
+        <div *ngFor="let project of current_projects" class="project-durability-type">
+            <div (click)="updateCurrentProject(project.name)" class="project-durability-type-name">
+                    {{project.name}}
+            </div>
+            <div class="project-durability-type-progress-bar" >
+                <div class="progress-fill" [style.width.%]="progress" *ngIf="project.name == current_project_name"></div>
+            </div>
+        </div>
     </div>
+    <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360" autoplay preload="metadata"
+       loop muted playsinline class="background" 
+       (loadedmetadata)="setDuration(videoPlayer)"
+       (timeupdate)="updateProgress(videoPlayer)" >
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+
+
+    <!-- <div class="projects-durability">
+        <div class="project-durability-type">
+           <div class="project-durability-type-name">
+                Project 1 name
+           </div>
+           <div class="project-durability-type-progress-bar">
+                <div class="progress-fill" [style.width.%]="progress"></div>
+           </div>
+        </div>
+
+        <div class="project-durability-type">
+            <div class="project-durability-type-name">
+                Project 2 name
+           </div>
+           <div class="project-durability-type-progress-bar">
+           </div>
+        </div>
+
+        <div class="project-durability-type">
+            <div class="project-durability-type-name">
+                Project 3 name
+            </div>
+            <div class="project-durability-type-progress-bar">
+            </div>
+            
+        </div>
+    </div> -->
+
 </div>

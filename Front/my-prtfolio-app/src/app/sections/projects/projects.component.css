@@ -47,18 +47,18 @@
   grid-template-rows: 80px 150px auto;
   gap: 10px;
 }
-.project-photo {
+.project-video_link {
   grid-column: 1;
   grid-row: 1/7;
 }
-.project-photo video {
+.project-video_link video {
   width: 100%;
   height: auto;
   max-width: 800px; /* ou plus si tu veux */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.project-photo img {
+.project-video_link img {
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -212,13 +212,13 @@ button:hover {
     grid-template-rows: auto;
   }
 
-  .project-photo {
+  .project-video_link {
     grid-column: 1;
     grid-row: auto;
     text-align: center;
   }
 
-  .project-photo video {
+  .project-video_link video {
     max-width: 100%;
   }
 

@@ -19,7 +19,7 @@ export class ProjectsComponent implements AfterViewInit {
   project_description =
     this.projects_data[this.current_project_index].description;
 
-  project_photo = this.projects_data[this.current_project_index].photo;
+  project_video_link = this.projects_data[this.current_project_index].video_link;
 
   project_link = this.projects_data[this.current_project_index].link;
 
@@ -42,7 +42,7 @@ export class ProjectsComponent implements AfterViewInit {
     this.project_name = project[this.current_project_index].name;
     this.project_description = project[this.current_project_index].description;
     this.project_link = project[this.current_project_index].link;
-    this.project_photo = project[this.current_project_index].photo;
+    this.project_video_link = project[this.current_project_index].video_link;
     this.project_techno = project[this.current_project_index].techno;
   }
   ngAfterViewInit() {

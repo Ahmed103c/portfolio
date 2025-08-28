@@ -1,10 +1,12 @@
-export const projects = [
+import { Project } from "../model/Project";
+
+export const projects : Project[] = [
   {
     name: 'Wealthwise',
     description:
       'Application bancaire centralisée permettant de gérer l’ensemble de ses comptes depuis une seule interface. Elle offre des statistiques financières détaillées et intègre un chatbot pour fournir des conseils personnalisés ',
-    
-      video_link: [
+    type: 'web-app',
+    video_link: [
       'https://res.cloudinary.com/dsvwz4dru/video/upload/v1744475731/lch8veyuvdgpt5dqiqvo.webm',
     ],
     link: 'https://github.com/Ahmed103c/WealthWise',
@@ -29,6 +31,7 @@ export const projects = [
   },
   {
     name: 'MyFilm',
+    type: 'web-app',
     description:
       'Plateforme web dédiée à l’hébergement et à la gestion de films, intégrant des API externes pour l’importation automatique de contenus variés.',
     
@@ -53,6 +56,7 @@ export const projects = [
   },
   {
     name: 'Beesim',
+    type: 'simulation',
     description:
       'Simulation multi-agents représentant l’interaction entre deux ruches d’abeilles, avec modélisation de comportements variés et dynamiques.',
     
@@ -69,6 +73,7 @@ export const projects = [
   },
   {
     name: 'Immolink',
+    type: 'web-app',
     description:
       'Prototype d’application web réalisé lors du Hackathon Sopra Steria, visant à simuler les interactions sociales et les liens de voisinage au sein d’une communauté.',
     
@@ -93,6 +98,7 @@ export const projects = [
   },
   {
     name: 'Evac',
+    type: 'simulation',
     description:
       'Simulation scientifique du mouvement de foule en situation d’évacuation d’urgence, basée sur des modèles comportementaux réalistes.',
     
@@ -103,6 +109,23 @@ export const projects = [
       {
         name: 'Python',
         icon: 'https://img.icons8.com/?size=100&id=Rc0Xn5AtE8kX&format=png&color=000000',
+      },
+    ],
+    link: 'https://github.com/Ahmed103c/Evac_Mvt_Foule',
+  },
+  {
+    name: 'Jeu de cartes',
+    type: 'upcoming',
+    description:
+      "simple jeu de Cartes",
+    
+      video_link: [
+      '',
+    ],
+    techno: [
+      {
+        name: '.NET C#',
+        icon: 'https://img.icons8.com/?size=100&id=Fycm8TUhWmFU&format=png&color=000000',
       },
     ],
     link: 'https://github.com/Ahmed103c/Evac_Mvt_Foule',
