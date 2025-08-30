@@ -1,0 +1,157 @@
+.education-container {
+    margin-top: 100px;
+    margin-bottom: px;
+    color:white;
+    display:grid;
+    grid-template-columns: 300px repeat(6,1fr);
+    grid-template-rows: 300px repeat(8,1fr);
+    /* border: 2px solid red; */
+    gap:10px;
+    font-family: "Roboto", serif;
+}
+.education-title{
+  font-size: 2.4em;
+  font-weight: 600;
+}
+.education-image-container{
+    /* border: 2px solid white; */
+    grid-column: 1/2;
+    grid-row: 1/10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+.education-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* garde le ratio et remplit le conteneur */
+  /* display: block; */
+  background: conic-gradient(from var(--angle), #f42d75, #8627ff, #f42d75);
+  padding: 10px; 
+  box-sizing: border-box;
+ 
+  position: relative;
+  z-index: 1;
+  animation: gradientMove 4s linear infinite;
+  /* aspect-ratio: 1/1; */
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes gradientMove {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.education-detail{
+    /* border: 2px solid blue; */
+    padding-left: 10px;
+    grid-column: 2/7;
+    grid-row: 1/10;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(9,1fr);
+    gap:5px;
+}
+.education-title{
+    /* border: 1px dashed green; */
+    grid-column: 1/7;
+    grid-row: 1/2;
+}
+.education-upper-component{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.one{
+    /* border: 1px dashed rgb(234, 255, 8); */
+    grid-column: 1/7;
+    grid-row: 2/4;
+}
+.two{
+    /* border: 1px dashed rgb(234, 255, 8); */
+    grid-column: 1/7;
+    grid-row: 4/6;
+}
+.three{
+    /* border: 1px dashed rgb(234, 255, 8); */
+    grid-column: 1/7;
+    grid-row: 6/8;
+}
+.four{
+    /* border: 1px dashed rgb(234, 255, 8); */
+    grid-column: 1/7;
+    grid-row: 8/10;
+}
+.education-component-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.education-component-time-line{
+  background: linear-gradient(90deg, #f42d75, #8627ff,#f42d75);
+  background-size:400% 400%;
+  animation: gradient-change-horz 12s ease-in-out infinite;
+  /* border: none; */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+} 
+@keyframes gradient-change-horz {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

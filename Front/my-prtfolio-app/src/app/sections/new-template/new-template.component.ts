@@ -31,15 +31,16 @@ export class NewTemplateComponent implements AfterViewInit {
     let project  = this.current_projects.find(p => p.name === this.current_project_name) || this.current_projects[0];
     this.current_project_video_link = project.video_link[0] || '';
     console.log("Project name : ",this.current_project_name);
+    const video = this.videoPlayer?.nativeElement;
+     video.autoplay = true;
   }
 
   video = this.videoPlayer?.nativeElement;
   ngOnInit(): void {
     this.animateProgress();
     this.setCurrentType(this.current_project_type);
-    this.video.pause();
   }
-
+  
   ngAfterViewInit() {
   const video = this.videoPlayer?.nativeElement;
   if (!video) return;
@@ -61,6 +62,10 @@ export class NewTemplateComponent implements AfterViewInit {
   }, { threshold: 0.5 });
 
   observer.observe(video);
+  if (video.getBoundingClientRect().top < window.innerHeight &&
+      video.getBoundingClientRect().bottom > 0) {
+    video.play().catch((err: any) => console.warn('Lecture bloquée (init):', err));
+  }
 }
 
   progress = 0;

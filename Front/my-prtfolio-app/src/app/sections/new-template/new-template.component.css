@@ -94,11 +94,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.project-durability-type{
 
-}
 .project-durability-type-name{
-
+    cursor: pointer;
 }
 .project-durability-type-progress-bar{
     margin-top: 5px;

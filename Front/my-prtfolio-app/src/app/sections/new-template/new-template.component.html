@@ -15,7 +15,6 @@
             check it out
         </div>
     </div>
-
     <div class="projects-durability">
         <div *ngFor="let project of current_projects" class="project-durability-type">
             <div (click)="updateCurrentProject(project.name)" class="project-durability-type-name">
@@ -26,14 +25,12 @@
             </div>
         </div>
     </div>
-    <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360"  preload="metadata"
+    <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360" autoplay preload="metadata"
        loop muted playsinline class="background" 
        (loadedmetadata)="setDuration(videoPlayer)"
        (timeupdate)="updateProgress(videoPlayer)" >
         Votre navigateur ne supporte pas la balise vidéo.
     </video>
-
-
     <!-- <div class="projects-durability">
         <div class="project-durability-type">
            <div class="project-durability-type-name">
@@ -61,5 +58,4 @@
             
         </div>
     </div> -->
-
 </div>
