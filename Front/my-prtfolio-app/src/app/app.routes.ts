@@ -7,7 +7,7 @@ export const routes: Routes = [
         path:'',
         component:AppComponent,
         children:[
-            {path :'contact',component:ContactComponent}
+            {path :'contact',component:ContactComponent},
         ]
     }
 ];

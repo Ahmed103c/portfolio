@@ -1,4 +1,4 @@
-.education-container {
+#education-container {
     margin-top: 100px;
     margin-bottom: px;
     color:white;
@@ -125,7 +125,7 @@
 }
 
 @media (max-width: 600px) {
-  .education-container {
+  #education-container {
     margin-top: 30px;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
-.projects-container {
-    margin-top: 50px;
-    height: 500px;
+#projects-container {
+    margin-top: 300px;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 100px 50px 300px 100px;
@@ -116,7 +116,7 @@
 
 /* Pour les tablettes et petits écrans */
 @media (max-width: 1024px) {
-  .projects-container {
+  #projects-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: auto;

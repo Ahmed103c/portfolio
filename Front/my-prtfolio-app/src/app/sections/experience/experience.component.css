@@ -1,4 +1,4 @@
-.work-container{
+#work-container{
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(7,1fr);
@@ -166,7 +166,7 @@
 }
 
 @media (max-width: 728px) {
-  .work-container {
+  #work-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     margin-top: 20px;
