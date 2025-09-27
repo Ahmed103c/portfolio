@@ -200,7 +200,7 @@
     color: blueviolet;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 601px) {
   #presentation-component {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -238,7 +238,7 @@
 
   .personal-name {
     grid-column: 1;
-    margin-left: 50px;
+    margin-left: 20px;
     grid-row: auto;
   }
   .personal-name h1 {
@@ -250,7 +250,7 @@
     grid-column: 1;
     grid-row: auto;
     font-size: 1.4em;
-    margin-left: 50px;
+    margin-left: 20px;
     text-align: center;
   }
   .arrow-container {

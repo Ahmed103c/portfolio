@@ -1,5 +1,5 @@
 #projects-container {
-    margin-top: 300px;
+    /* margin-top: 300px; */
     height: 90vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

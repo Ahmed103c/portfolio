@@ -1,8 +1,8 @@
-/* .components {
+.components {
   display: flex;
   flex-direction: column;
-  gap: 100px;
-} */
-.components {
-  width: 100%;
+  gap: 0px;
 }
+/* .components {
+  width: 100%;
+} */
