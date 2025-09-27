@@ -6,6 +6,33 @@
     <div class="work-road-map">
         <div class="roadmap-path"></div>
         <div class="experience">
+            <div class="job-date-1">
+                03/2025 - 07/2025
+            </div>
+            <div class="svg-icon-1">
+                <img src="images/config.svg" alt="" style="width:40px; height:40px;">
+            </div>
+            <div class="job-title">
+                Ingénieur Automatisation logicielle
+            </div>
+            <div class="job-company-place">
+                Siemens - Lyon
+            </div>
+            <button  class="savoir-plus-button" (click)="toggleDescription(1)">
+                {{ openId === 1 ? 'Fermer' : 'Savoir plus' }}
+            </button>
+            <div class="job-description" [class.visible]="openId === 1">
+                <div class="job-description-title">
+                    Ingénieur Automatisation logicielle
+                </div>
+                <div class="job-description-work">
+                    J'ai travaillé sur l'automatisation des processus de création des modèles physiques unitaires
+                    pour optimiser la phase des tests de non-régression chez Siemens.<br><br>
+                    Technologies utilisées : Python, Yaml , JSON , C/C++ .
+                </div>
+            </div>
+        </div>
+        <div class="experience">
             <div class="job-date-2">
                 En cours
             </div>
@@ -30,33 +57,6 @@
                     développer et maintenir des services backend robustes et évolutifs pour soutenir les applications
                     internes de l'entreprise.<br><br>
                     Technologies utilisées : C# .Net, SQL Server, Azure DevOps, RESTful APIs.
-                </div>
-            </div>
-        </div>
-                <div class="experience">
-            <div class="job-date-1">
-                03/2025 - 07/2025
-            </div>
-            <div class="svg-icon-1">
-                <img src="images/config.svg" alt="" style="width:40px; height:40px;">
-            </div>
-            <div class="job-title">
-                Ingénieur Automatisation logicielle
-            </div>
-            <div class="job-company-place">
-                Siemens - Lyon
-            </div>
-            <button  class="savoir-plus-button" (click)="toggleDescription(1)">
-                {{ openId === 1 ? 'Fermer' : 'Savoir plus' }}
-            </button>
-            <div class="job-description" [class.visible]="openId === 1">
-                <div class="job-description-title">
-                    Ingénieur Automatisation logicielle
-                </div>
-                <div class="job-description-work">
-                    J'ai travaillé sur l'automatisation des processus de création des modèles physiques unitaires
-                    pour optimiser la phase des tests de non-régression chez Siemens.<br><br>
-                    Technologies utilisées : Python, Yaml , JSON , C/C++ .
                 </div>
             </div>
         </div>

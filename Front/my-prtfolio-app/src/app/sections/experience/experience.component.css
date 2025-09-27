@@ -180,7 +180,7 @@
     grid-row: 1;
   }
   .work-road-map {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: stretch;
     /* gap: 20px; */
     padding: 0;

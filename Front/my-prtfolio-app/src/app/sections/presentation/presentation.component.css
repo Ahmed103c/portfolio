@@ -214,7 +214,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    border: solid red;
+    
   }
 
   .personal-photo img {
@@ -223,18 +223,16 @@
   }
 
   .welcome {
-    border: solid red;
+    
     grid-column: 1;
     grid-row: auto;
     text-align: center;
     justify-content: center;
   }
   .greetings-detail {
-    border: solid green;
     font-size: 1.1em;
   }
   .job-title {
-    border: solid green;
     font-size: 2em;
   }
 
@@ -242,7 +240,6 @@
     grid-column: 1;
     margin-left: 50px;
     grid-row: auto;
-    border: solid green;
   }
   .personal-name h1 {
     font-size: 2em;
@@ -250,7 +247,6 @@
     text-align: center;
   }
   .personal-debrief {
-    border: solid green;
     grid-column: 1;
     grid-row: auto;
     font-size: 1.4em;
