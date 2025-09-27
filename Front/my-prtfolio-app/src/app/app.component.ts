@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PresentationComponent } from './sections/presentation/presentation.component';
@@ -10,6 +10,10 @@ import AOS from 'aos'; // Importation correcte de AOS
 import 'aos/dist/aos.css'; // Importation des styles AOS
 import { NewTemplateComponent } from './sections/new-template/new-template.component';
 import { StudiesComponent } from './sections/studies/studies.component';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-root',
@@ -29,20 +33,30 @@ import { StudiesComponent } from './sections/studies/studies.component';
   styleUrls: ['./app.component.css'], // Assure-toi de bien mettre 'styleUrls' au lieu de 'styleUrl'
 })
 // export class AppComponent implements OnInit {
-export class AppComponent  {
+export class AppComponent  implements AfterViewInit{
   title = 'my-prtfolio-app';
 
-  // ngOnInit() {
-  //   AOS.init({
-  //     duration: 1200, // Durée de l'animation
-  //     easing: 'ease-in-out', // Easing de l'animation
-  //     once: false, // L'animation se déclenche une seule fois lors du premier passage
-  //     mirror: true, // L'animation est réversible lorsque l'utilisateur fait défiler la page vers le bas
-  //     offset: 200, // L'animation commence lorsqu'on est à 200px de l'élément
-  //     //delay: 200, // Délai avant que l'animation commence
-  //   });
-  // }
-  // ngAfterViewChecked() {
-  //   AOS.refresh(); // Rafraîchit les animations au fur et à mesure du défilement
-  // }
+  constructor(private ngZone: NgZone) {}
+
+  ngAfterViewInit(): void {
+    this.ngZone.runOutsideAngular(() => {
+      const panels = document.querySelectorAll('.panel');
+
+      panels.forEach((panel, i) => {
+        gsap.from(panel, {
+          opacity: 0,
+          y: 100,
+          duration: 2,
+          scrollTrigger: {
+            trigger: panel,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+            // markers: true // remove once it works
+          }
+        });
+      });
+    });
+  }
+
+
 }
