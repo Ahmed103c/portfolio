@@ -164,3 +164,68 @@
   transform: translateY(-50%);
   z-index: -1;          
 }
+
+@media (max-width: 728px) {
+  .work-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 4px;
+  }
+  .work-title {
+    font-size: 1.3em;
+    padding: 10px 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .work-road-map {
+    flex-direction: column;
+    align-items: stretch;
+    /* gap: 20px; */
+    padding: 0;
+    margin-top: 10px;
+    grid-column: 1;
+    grid-row: 2;
+    position: static;
+  }
+  .experience {
+    margin: 0;
+    gap: 2px;
+    font-size: 1em;
+    align-items: center;
+  }
+  .svg-icon-1,
+  .svg-icon-2 {
+    margin: 0 auto 8px auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .job-date-1,
+  .job-date-2,
+  .job-title,
+  .job-company-place {
+    text-align: center;
+    font-size: 1em;
+  }
+  .job-description {
+    position: static;
+    max-width: 100%;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 8px 0;
+    padding: 8px 6px;
+    font-size: 0.95em;
+    z-index: 1;
+  }
+  .savoir-plus-button {
+    font-size: 0.95em;
+    padding: 6px 10px;
+    margin-top: 6px;
+  }
+  .roadmap-path {
+    display: none;
+  }
+}

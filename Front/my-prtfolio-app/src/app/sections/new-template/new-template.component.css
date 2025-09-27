@@ -111,3 +111,78 @@
   background : linear-gradient(90deg, #f42d75, #8627ff);
   transition: width 0.2s linear;
 }
+
+/* ...existing code... */
+
+/* Pour les tablettes et petits écrans */
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    padding-left: 0;
+  }
+  .projects-title {
+    font-size: 2em;
+    padding: 10px 0;
+  }
+  .projects-menu {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+  .current-project-title {
+    padding-top: 40px;
+    padding-left: 0;
+    font-size: 1.2em;
+  }
+  .projects-durability {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+}
+
+/* Pour les mobiles */
+@media (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    padding-left: 0;
+  }
+  .projects-title {
+    font-size: 1.3em;
+    padding: 8px 0;
+  }
+  .projects-menu {
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+  }
+  .project-type,
+  .project-check {
+    font-size: 0.9em;
+    padding: 8px 6px;
+  }
+  .current-project-title {
+    padding-top: 20px;
+    padding-left: 0;
+    font-size: 1em;
+  }
+  .current-project-name {
+    font-size: 1.2em;
+    padding: 8px 6px;
+  }
+  .projects-durability {
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+    font-size: 1em;
+  }
+  .project-durability-type-progress-bar {
+    height: 4px;
+  }
+}
+
+/* ...existing code... */

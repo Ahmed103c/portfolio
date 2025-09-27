@@ -50,38 +50,6 @@
     --angle: 360deg;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .education-detail{
     /* border: 2px solid blue; */
     padding-left: 10px;
@@ -153,5 +121,74 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 6px;
+  }
+  .education-image-container {
+    /* width: 100%;
+    height: 120px;
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center; */
+    display: none;
+  }
+  .education-image-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    object-fit: cover;
+    padding: 0;
+    animation: gradientMove 4s linear infinite;
+  }
+  .education-detail {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .education-title {
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .education-component {
+    margin-bottom: 10px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    background: rgba(40, 0, 60, 0.4);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .education-upper-component {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .education-component-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  .education-component-time-line {
+    font-size: 0.95em;
+    padding: 4px 10px;
+    border-radius: 14px;
+    margin-bottom: 4px;
+  }
+  .education-component-brief-description {
+    font-size: 0.95em;
+    margin-top: 4px;
   }
 }

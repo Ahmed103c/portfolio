@@ -206,14 +206,15 @@
     grid-template-rows: auto;
     height: auto;
     padding: 10px;
+    overflow: hidden;
   }
-
   .personal-photo {
     grid-column: 1;
     grid-row: auto;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+    border: solid red;
   }
 
   .personal-photo img {
@@ -222,27 +223,40 @@
   }
 
   .welcome {
+    border: solid red;
     grid-column: 1;
     grid-row: auto;
     text-align: center;
+    justify-content: center;
   }
-
-  .personal-name h1 {
-    font-size: 2em;
-    text-align: center;
-  }
-
   .greetings-detail {
+    border: solid green;
     font-size: 1.1em;
   }
-
-  .personal-debrief {
-    grid-column: 1;
-    grid-row: auto;
-    font-size: 1.2em;
-    text-align: center;
+  .job-title {
+    border: solid green;
+    font-size: 2em;
   }
 
+  .personal-name {
+    grid-column: 1;
+    margin-left: 50px;
+    grid-row: auto;
+    border: solid green;
+  }
+  .personal-name h1 {
+    font-size: 2em;
+    
+    text-align: center;
+  }
+  .personal-debrief {
+    border: solid green;
+    grid-column: 1;
+    grid-row: auto;
+    font-size: 1.4em;
+    margin-left: 50px;
+    text-align: center;
+  }
   .arrow-container {
     grid-column: 1;
     grid-row: auto;
@@ -252,5 +266,72 @@
   .arrow span {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #presentation-component {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+  .personal-photo {
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: none;
+  }
+  .personal-photo img {
+    max-width: 180px;
+    height: auto;
+  }
+  .welcome {
+    grid-column: 2;
+    grid-row: auto;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 8px;
+    border: none;
+  }
+  .greetings-detail {
+    font-size: 1em;
+    letter-spacing: 6px;
+    border: none;
+  }
+  .job-title {
+    font-size: 1.5em;
+    border: none;
+  }
+  .personal-name {
+    margin-left: 0;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 14px;
+    border: none;
+  }
+  .personal-name h1 {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+  .personal-debrief {
+    font-size: 1em;
+    margin-left: 0;
+    padding: 8px;
+    border: none;
+    text-align: left;
+  }
+  .arrow-container {
+    margin-top: 10px;
+    border: none;
+  }
+  .arrow span {
+    width: 22px;
+    height: 22px;
+    border-bottom: 6px solid;
+    border-right: 6px solid;
   }
 }
