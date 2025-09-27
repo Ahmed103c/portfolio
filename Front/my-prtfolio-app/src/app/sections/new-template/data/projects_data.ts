@@ -114,7 +114,7 @@ export const projects : Project[] = [
     link: 'https://github.com/Ahmed103c/Evac_Mvt_Foule',
   },
   {
-    name: 'Jeu de cartes',
+    name: '********',
     type: 'upcoming',
     description:
       "simple jeu de Cartes",
