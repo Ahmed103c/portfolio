@@ -1,11 +1,11 @@
 <div id="work-container">
-    <div class="work-title">
+    <div class="work-title" data-aos="fade-up">
         Expériences Professionnelles
     </div>
 
     <div class="work-road-map">
         <div class="roadmap-path"></div>
-        <div class="experience">
+        <div class="experience" data-aos="fade-right" data-aos-delay="200">
             <div class="job-date-1">
                 03/2025 - 07/2025
             </div>
@@ -18,7 +18,7 @@
             <div class="job-company-place">
                 Siemens - Lyon
             </div>
-            <button  class="savoir-plus-button" (click)="toggleDescription(1)">
+            <button class="savoir-plus-button" (click)="toggleDescription(1)">
                 {{ openId === 1 ? 'Fermer' : 'Savoir plus' }}
             </button>
             <div class="job-description" [class.visible]="openId === 1">
@@ -32,13 +32,13 @@
                 </div>
             </div>
         </div>
-        <div class="experience">
+        <div class="experience" data-aos="fade-left" data-aos-delay="400">
             <div class="job-date-2">
                 En cours
             </div>
             <div class="svg-icon-2">
                 <img src="images/backend.svg" alt="" style="width:40px; height:40px;">
-            </div>   
+            </div>
             <div class="job-title">
                 Ingénieur Backend .Net
             </div>
@@ -53,7 +53,8 @@
                     Ingénieur Backend .Net
                 </div>
                 <div class="job-description-work">
-                    Actuellement, je travaille en tant qu'ingénieur backend .Net chez Michelin. Mon rôle principal est de
+                    Actuellement, je travaille en tant qu'ingénieur backend .Net chez Michelin. Mon rôle principal est
+                    de
                     développer et maintenir des services backend robustes et évolutifs pour soutenir les applications
                     internes de l'entreprise.<br><br>
                     Technologies utilisées : C# .Net, SQL Server, Azure DevOps, RESTful APIs.

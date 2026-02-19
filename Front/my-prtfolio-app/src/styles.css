@@ -1,9 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============ GLOBAL STYLES ============ */
 body {
-  background: linear-gradient(90deg, #000000 5%, #2e014a 100%);
+  background: linear-gradient(135deg, #000000 0%, #2e014a 100%);
+  min-height: 100vh;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Images responsive par défaut */
+img {
+  max-width: 100%;
+  height: auto;
 }

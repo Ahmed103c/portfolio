@@ -33,10 +33,18 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./app.component.css'], // Assure-toi de bien mettre 'styleUrls' au lieu de 'styleUrl'
 })
 // export class AppComponent implements OnInit {
-export class AppComponent  implements AfterViewInit{
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'my-prtfolio-app';
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone) { }
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true
+    });
+  }
 
   ngAfterViewInit(): void {
     this.ngZone.runOutsideAngular(() => {
@@ -55,6 +63,9 @@ export class AppComponent  implements AfterViewInit{
           }
         });
       });
+
+      // Refresh AOS on scroll to ensure compatibility with GSAP
+      ScrollTrigger.addEventListener('refresh', () => AOS.refresh());
     });
   }
 

@@ -1,13 +1,13 @@
 <div id="projects-container">
-    <div class="projects-title">
+    <div class="projects-title" data-aos="fade-down">
         Projects
     </div>
-    <div class="projects-menu">
+    <div class="projects-menu" data-aos="fade-right" data-aos-delay="200">
         <div class="project-type" (click)="setCurrentType('web-app')">web developpement</div>
         <div class="project-type" (click)="setCurrentType('simulation')">simulation</div>
         <div class="project-type" (click)="setCurrentType('upcoming')">upcoming</div>
     </div>
-    <div class="current-project-title">
+    <div class="current-project-title" data-aos="zoom-in" data-aos-delay="400">
         <div class="current-project-name">
             {{current_project_name}}
         </div>
@@ -15,20 +15,20 @@
             check it out
         </div>
     </div>
-    <div class="projects-durability">
+    <div class="projects-durability" data-aos="fade-up" data-aos-delay="600">
         <div *ngFor="let project of current_projects" class="project-durability-type">
             <div (click)="updateCurrentProject(project.name)" class="project-durability-type-name">
-                    {{project.name}}
+                {{project.name}}
             </div>
-            <div class="project-durability-type-progress-bar" >
-                <div class="progress-fill" [style.width.%]="progress" *ngIf="project.name == current_project_name"></div>
+            <div class="project-durability-type-progress-bar">
+                <div class="progress-fill" [style.width.%]="progress" *ngIf="project.name == current_project_name">
+                </div>
             </div>
         </div>
     </div>
     <video #videoPlayer [attr.src]="current_project_video_link" width="640" height="360" autoplay preload="metadata"
-       loop muted playsinline class="background" 
-       (loadedmetadata)="setDuration(videoPlayer)"
-       (timeupdate)="updateProgress(videoPlayer)" >
+        loop muted playsinline class="background" (loadedmetadata)="setDuration(videoPlayer)"
+        (timeupdate)="updateProgress(videoPlayer)">
         Votre navigateur ne supporte pas la balise vidéo.
     </video>
 

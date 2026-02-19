@@ -1,8 +1,25 @@
 .components {
   display: flex;
   flex-direction: column;
-  gap: 0px;
-}
-/* .components {
+  gap: 0;
   width: 100%;
-} */
+}
+
+.components section {
+  width: 100%;
+}
+
+.section-gap {
+  margin-top: 80px;
+}
+
+/* Responsive sections */
+@media (max-width: 480px) {
+  .components section {
+    padding: 0;
+  }
+
+  .section-gap {
+    margin-top: 40px;
+  }
+}

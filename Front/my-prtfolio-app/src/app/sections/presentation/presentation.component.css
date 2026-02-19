@@ -9,53 +9,62 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 15px;
 }
+
 .personal-photo {
   grid-column: 1/2;
   grid-row: 1/4;
   padding: 10px;
   display: flex;
-  justify-content: center; /* centrer horizontalement */
-  align-items: center;     /* centrer verticalement */
+  justify-content: center;
+  /* centrer horizontalement */
+  align-items: center;
+  /* centrer verticalement */
 }
+
 .personal-photo img {
-  width: 400px;
-  height: 100%;
+  width: clamp(150px, 25vw, 380px);
+  height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
   background: conic-gradient(from var(--angle), #f42d75, #8627ff, #f42d75);
-  padding: 10px; 
+  padding: 10px;
   box-sizing: border-box;
- 
+
   position: relative;
   z-index: 1;
   animation: gradientMove 4s linear infinite;
 }
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
+
 @keyframes gradientMove {
   from {
     --angle: 0deg;
   }
+
   to {
     --angle: 360deg;
   }
 }
+
 .welcome {
   /* border: solid red; */
   grid-column: 2/6;
   grid-row: 1/4;
   padding: 10px;
   display: grid;
-  grid-template-columns:repeat(5, 1fr) ;
+  grid-template-columns: repeat(5, 1fr);
   /* grid-template-rows: repeat(4, 1fr); */
 
   gap: 2px;
 
 }
+
 .greetings-detail {
   grid-column: 1/6;
   grid-row: 1/2;
@@ -64,6 +73,7 @@
   /* border: solid pink; */
   letter-spacing: 10px;
 }
+
 /* .greetings-detail span {
   color: blueviolet;
 } */
@@ -76,51 +86,53 @@
   color: white;
   font-weight: 500;
 }
+
 .personal-name {
-  /* border: solid 2px white; */
   grid-column: 1/3;
   grid-row: 3/4;
-  /* border: solid pink; */
-  padding: 18px 60px;
-  border-radius: 20px; /* More rounded corners */
-  background: linear-gradient(90deg, #f42d75, #8627ff,#f42d75);
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-size:400% 400%;
-  animation: gradient-change-horz 12s ease-in-out infinite;
+  justify-content: flex-start;
+  background: transparent;
 }
 
 @keyframes gradient-change-horz {
   0% {
     background-position: 0% 50%;
   }
+
   25% {
     background-position: 25% 75%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   75% {
     background-position: 25% 75%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-.personal-name h1 {
-  font-size: 2em;
-  
-  color: white;
-  letter-spacing: 1px;
+.personal-name h1,
+.gradient-name {
+  font-size: 2.4em;
   font-family: "Roboto", serif;
-  font-weight: 300;
-  margin: 0; /* Remove default margin */
-  background: none; /* Remove background from h1 */
-  border-radius: 12px; /* Slight rounding for h1 if needed */
-  text-align: center;
-  padding: 8px 24px; 
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: left;
+  background: linear-gradient(90deg, #f42d75, #8627ff, #f42d75);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-change-horz 6s ease-in-out infinite;
 }
 
 
@@ -139,7 +151,8 @@
   content: "";
   display: block;
   border-top: 2px solid white;
-  margin: 0 auto 12px auto; /* Ajoute un espace de 12px au-dessus */
+  margin: 0 auto 12px auto;
+  /* Ajoute un espace de 12px au-dessus */
   width: 100%;
 }
 
@@ -151,6 +164,7 @@
 .cen {
   text-align: center;
 }
+
 .arrow-container {
   grid-column: span 6;
   grid-row: 4 / 10;
@@ -161,6 +175,7 @@
   align-items: center;
   position: relative;
 }
+
 .arrow {
   display: flex;
   flex-direction: column;
@@ -168,6 +183,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .arrow span {
   display: block;
   width: 2.7vw;
@@ -178,6 +194,7 @@
   margin: 5px 0;
   animation: animate 2s infinite;
 }
+
 .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
@@ -185,21 +202,25 @@
 .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
 @keyframes animate {
   0% {
     opacity: 0;
     transform: rotate(45deg) translate(-20px, -20px);
   }
+
   50% {
     opacity: 1;
     color: blueviolet;
   }
+
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
     color: blueviolet;
   }
 }
+
 @media (max-width: 601px) {
   #presentation-component {
     grid-template-columns: 1fr;
@@ -208,13 +229,14 @@
     padding: 10px;
     overflow: hidden;
   }
+
   .personal-photo {
     grid-column: 1;
     grid-row: auto;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    
+
   }
 
   .personal-photo img {
@@ -223,40 +245,54 @@
   }
 
   .welcome {
-    
     grid-column: 1;
     grid-row: auto;
     text-align: center;
     justify-content: center;
+    align-items: center;
+    display: grid;
+    place-items: center;
   }
+
   .greetings-detail {
     font-size: 1.1em;
+    text-align: center;
+    letter-spacing: 6px;
+    grid-column: 1/-1;
   }
+
   .job-title {
-    font-size: 2em;
+    font-size: 1.6em;
+    text-align: center;
+    grid-column: 1/-1;
   }
 
   .personal-name {
-    grid-column: 1;
-    margin-left: 20px;
+    grid-column: 1/-1;
+    margin-left: 0;
     grid-row: auto;
+    justify-content: center;
   }
-  .personal-name h1 {
-    font-size: 2em;
-    
+
+  .gradient-name {
+    font-size: 1.8em;
     text-align: center;
   }
+
   .personal-debrief {
-    grid-column: 1;
+    grid-column: 1/-1;
     grid-row: auto;
-    font-size: 1.4em;
-    margin-left: 20px;
+    font-size: 1.1em;
+    margin-left: 0;
     text-align: center;
+    padding: 10px;
   }
+
   .arrow-container {
     grid-column: 1;
     grid-row: auto;
     margin-top: 20px;
+    justify-content: center;
   }
 
   .arrow span {
@@ -273,6 +309,7 @@
     padding: 12px;
     gap: 12px;
   }
+
   .personal-photo {
     grid-column: 1;
     grid-row: auto;
@@ -281,10 +318,12 @@
     margin-bottom: 10px;
     border: none;
   }
+
   .personal-photo img {
     max-width: 180px;
     height: auto;
   }
+
   .welcome {
     grid-column: 2;
     grid-row: auto;
@@ -293,15 +332,18 @@
     padding: 8px;
     border: none;
   }
+
   .greetings-detail {
     font-size: 1em;
     letter-spacing: 6px;
     border: none;
   }
+
   .job-title {
     font-size: 1.5em;
     border: none;
   }
+
   .personal-name {
     margin-left: 0;
     padding: 10px 20px;
@@ -309,10 +351,12 @@
     border-radius: 14px;
     border: none;
   }
+
   .personal-name h1 {
     font-size: 1.2em;
     padding: 6px 12px;
   }
+
   .personal-debrief {
     font-size: 1em;
     margin-left: 0;
@@ -320,10 +364,12 @@
     border: none;
     text-align: left;
   }
+
   .arrow-container {
     margin-top: 10px;
     border: none;
   }
+
   .arrow span {
     width: 22px;
     height: 22px;

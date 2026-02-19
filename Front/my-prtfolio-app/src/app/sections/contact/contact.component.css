@@ -1,115 +1,130 @@
-.component__style.contact-component {
-  margin-top: 100px;
+/* ============ FOOTER ============ */
+.footer {
   width: 100%;
-  padding: 10px 20px;
-  margin-bottom: 0;
-  background-color: #333;
+  background: linear-gradient(135deg, #0a0010 0%, #2e014a 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 48px 40px 20px;
+  margin-top: 60px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   background: linear-gradient(90deg, #000000 5%, #2e014a 100%);
+  font-family: "Roboto", serif;
 }
 
-.component__description {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 1200px;
-}
-
-#contact-component {
+.footer-content {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.con1,
-.con2,
-.con3,
-.con4 {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  text-align: center;
-  color: white;
-  /* background-color: #251c3a; */
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.footer-brand h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f42d75, #8627ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px 0;
 }
-a {
+
+.footer-brand p {
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  color: inherit;
+  font-size: 0.95em;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
-.con1:hover,
-.con2:hover,
-.con3:hover,
-.con4:hover {
-  background-color: #150022;
+.footer-item:hover {
+  background: rgba(134, 39, 255, 0.2);
+  border-color: rgba(134, 39, 255, 0.4);
+  color: white;
+  transform: translateX(4px);
 }
-.con1 {
-  position: relative;
-  display: inline-block;
+
+.footer-cv {
+  background: linear-gradient(135deg, rgba(244, 45, 117, 0.2), rgba(134, 39, 255, 0.2));
+  border-color: rgba(244, 45, 117, 0.4);
+  font-weight: 600;
 }
-.tooltip-email {
-  visibility: hidden;
-  font-family: "Roboto", serif;
-  background-color: #150022;
-  font-size: 1.5em;
-  color: #fff;
+
+.footer-cv:hover {
+  background: linear-gradient(135deg, rgba(244, 45, 117, 0.35), rgba(134, 39, 255, 0.35));
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
-  padding: 6px 10px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.35);
 }
-.con1:hover .tooltip-email {
-  visibility: visible;
-  opacity: 1;
-}
-@media (max-width: 600px) {
-  .component__style.contact-component {
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .footer {
+    padding: 36px 20px 16px;
     margin-top: 40px;
-    padding: 8px 4px;
-    flex-direction: column;
-    align-items: stretch;
   }
-  .component__description {
+
+  .footer-content {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
-    /* gap: 10px; */
+    text-align: center;
+    gap: 28px;
   }
-  #contact-component {
-    flex-direction: column;
+
+  .footer-brand h2 {
+    font-size: 1.5em;
+  }
+
+  .footer-links {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .footer-item {
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
   }
-  .con1,
-  .con2,
-  .con3,
-  .con4 {
-    font-size: 1em;
-    padding: 8px 6px;
-    margin-bottom: 8px;
-    width: 90%;
-    max-width: 320px;
-    box-sizing: border-box;
+
+  .footer-item:hover {
+    transform: translateY(-2px);
   }
-  .tooltip-email {
-    font-size: 1em;
-    padding: 4px 8px;
-    bottom: 110%;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 28px 14px 12px;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.3em;
+  }
+
+  .footer-item {
+    font-size: 0.88em;
+    padding: 7px 12px;
   }
 }
