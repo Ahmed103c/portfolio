@@ -21,57 +21,96 @@
       </svg>
       <span>Projet DevOps</span>
     </div>
-    <h1 class="hero-title">Pixel War</h1>
+    <h1 class="hero-title">PixelWar</h1>
     <p class="hero-subtitle">
-      Déploiement d'une infrastructure cloud-native sur AWS.
-      Mise en place d'une pipeline CI/CD pour le jeu Pixel War.
+      Transformation d'une application web basique — un jeu collaboratif de Pixel War — en une plateforme
+      Cloud-Native complète, déployée sur AWS et orchestrée par Kubernetes.
     </p>
   </header>
 
-  <!-- Pipeline Overview -->
+  <!-- Structure du dépôt -->
   <section class="section-block">
     <h2 class="section-title">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
       </svg>
-      Vue d'ensemble du Pipeline
+      Structure du dépôt
     </h2>
-    <div class="pipeline-overview">
-      <div class="pipeline-step">
-        <div class="step-number">01</div>
-        <div class="step-content">
-          <h3>Code & Versionning</h3>
-          <p>Gestion du code source avec Git, stratégie de branching GitFlow, et revue de code systématique via Pull
-            Requests.</p>
+    <p class="section-text">
+      J'ai créé une organisation GitHub <strong>Pixel-Cloud-Ops</strong> avec deux repositories séparés :
+    </p>
+    <div class="repo-cards">
+      <div class="repo-card">
+        <div class="repo-icon">📦</div>
+        <h3>pixelwar-application</h3>
+        <p>Code source de l'application + GitHub Actions workflows</p>
+        <a href="https://github.com/Pixels-Cloud-Ops/pixelwar-application" target="_blank" rel="noopener noreferrer"
+          class="repo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Aller vers le repo
+        </a>
+      </div>
+      <div class="repo-card">
+        <div class="repo-icon">🏗️</div>
+        <h3>pixelwar-infra</h3>
+        <p>Provisionnement Terraform + playbooks Ansible</p>
+        <a href="https://github.com/Pixels-Cloud-Ops/pixelwar-infra" target="_blank" rel="noopener noreferrer"
+          class="repo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Aller vers le repo
+        </a>
+      </div>
+    </div>
+    <p class="section-text muted">
+      Cette séparation suit le principe de <strong>séparation des responsabilités</strong> — le code
+      applicatif et l'infrastructure évoluent indépendamment.
+    </p>
+  </section>
+
+  <!-- Introduction / Problématiques -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      Problématiques
+    </h2>
+    <p class="section-intro">
+      Ce projet répond à deux problématiques concrètes :
+    </p>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-label">Problématique 1</div>
+        <p>Comment déployer une application sur internet de manière automatisée et reproductible ?</p>
+        <div class="problem-image">
+          <img src="images/pixelWar/probleme 1.png" alt="Problématique 1 — Déploiement automatisé">
         </div>
       </div>
-      <div class="pipeline-step">
-        <div class="step-number">02</div>
-        <div class="step-content">
-          <h3>Build & Test</h3>
-          <p>Compilation automatisée, exécution des tests unitaires et d'intégration, analyse de qualité du code avec
-            SonarQube.</p>
-        </div>
-      </div>
-      <div class="pipeline-step">
-        <div class="step-number">03</div>
-        <div class="step-content">
-          <h3>Conteneurisation</h3>
-          <p>Construction d'images Docker optimisées multi-stage, push vers un registre privé (ACR/Docker Hub).</p>
-        </div>
-      </div>
-      <div class="pipeline-step">
-        <div class="step-number">04</div>
-        <div class="step-content">
-          <h3>Déploiement</h3>
-          <p>Déploiement automatique sur Kubernetes avec stratégie blue/green, rollback automatique en cas d'échec.</p>
+      <div class="problem-card">
+        <div class="problem-label">Problématique 2</div>
+        <p>Comment passer d'une version à l'autre sans interruption de service ?</p>
+        <div class="problem-image">
+          <img src="images/pixelWar/probleme 2.png" alt="Problématique 2 — Mise à jour sans interruption">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technologies -->
+  <!-- L'application -->
   <section class="section-block">
     <h2 class="section-title">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -80,43 +119,21 @@
         <line x1="8" y1="21" x2="16" y2="21"></line>
         <line x1="12" y1="17" x2="12" y2="21"></line>
       </svg>
-      Technologies Utilisées
+      L'application
     </h2>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-card-icon docker">🐳</div>
-        <h3>Docker</h3>
-        <p>Conteneurisation de l'application et de ses dépendances</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card-icon k8s">☸️</div>
-        <h3>Kubernetes</h3>
-        <p>Orchestration des conteneurs et scaling automatique</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card-icon jenkins">⚙️</div>
-        <h3>Jenkins</h3>
-        <p>Pipeline CI/CD avec Jenkinsfile déclaratif</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card-icon terraform">🏗️</div>
-        <h3>Terraform</h3>
-        <p>Infrastructure as Code pour le provisioning cloud</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card-icon azure">☁️</div>
-        <h3>Azure</h3>
-        <p>Plateforme cloud pour l'hébergement et les services managés</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-card-icon monitoring">📊</div>
-        <h3>Prometheus & Grafana</h3>
-        <p>Monitoring, alerting et visualisation des métriques</p>
-      </div>
+    <p class="section-text">
+      L'application permet à plusieurs utilisateurs de modifier les pixels d'une grille partagée.
+      Elle est composée d'un <strong>frontend React</strong>, d'un <strong>backend ASP.NET Core</strong>
+      et d'une base de données <strong>PostgreSQL</strong>. L'ensemble a d'abord été développé et testé
+      localement avant d'être déployé sur AWS.
+    </p>
+    <div class="section-image">
+      <img src="images/pixelWar/applicaiton developpe localement.png" alt="Application développée localement">
+      <span class="image-caption">Application développée et testée localement</span>
     </div>
   </section>
 
-  <!-- Architecture -->
+  <!-- Architecture AWS -->
   <section class="section-block">
     <h2 class="section-title">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -125,60 +142,289 @@
         <polyline points="2 17 12 22 22 17"></polyline>
         <polyline points="2 12 12 17 22 12"></polyline>
       </svg>
-      Architecture du Projet
+      Architecture cible sur AWS
     </h2>
-    <div class="architecture-diagram">
-      <div class="arch-layer">
-        <div class="arch-label">Développeur</div>
-        <div class="arch-boxes">
-          <div class="arch-box">Git Push</div>
-          <div class="arch-box">Pull Request</div>
+    <p class="section-text">
+      L'objectif était de créer deux environnements séparés et isolés :
+    </p>
+    <div class="env-cards">
+      <div class="env-card">
+        <div class="env-name">Indus</div>
+        <p>Environnement d'intégration avec 1 master + 1 worker</p>
+      </div>
+      <div class="env-card">
+        <div class="env-name">Prod</div>
+        <p>Environnement de production avec 1 master + 2 workers</p>
+      </div>
+    </div>
+    <p class="section-text">
+      La base de données PostgreSQL est hébergée sur une instance <strong>RDS AWS managée</strong>,
+      séparée des EC2. Ce choix s'impose car les instances EC2 t3.small du free tier sont limitées
+      en mémoire — faire tourner PostgreSQL dedans aurait compromis les performances de l'application.
+    </p>
+    <div class="section-image">
+      <img src="images/pixelWar/architectire de la solution aws.png" alt="Architecture de la solution AWS">
+      <span class="image-caption">Architecture de la solution sur AWS</span>
+    </div>
+  </section>
+
+  <!-- Pipeline CI/CD -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+      </svg>
+      Pipeline CI/CD
+    </h2>
+    <p class="section-text">
+      L'objectif est d'avoir une pipeline GitHub Actions qui automatise entièrement les déploiements :
+    </p>
+    <div class="pipeline-rules">
+      <div class="pipeline-rule">
+        <div class="rule-trigger">Push sur main</div>
+        <div class="rule-arrow">→</div>
+        <div class="rule-action">Build automatique des images Docker + déploiement sur l'environnement indus</div>
+      </div>
+      <div class="pipeline-rule">
+        <div class="rule-trigger">PR mergée vers prod</div>
+        <div class="rule-arrow">→</div>
+        <div class="rule-action">Déploiement automatique sur l'environnement de production</div>
+      </div>
+    </div>
+    <p class="section-text muted">
+      Cette approche garantit que la production ne reçoit jamais de code non validé sur indus.
+    </p>
+    <div class="section-image">
+      <img src="images/pixelWar/architecutre pipeline github actions.png" alt="Architecture pipeline GitHub Actions">
+      <span class="image-caption">Architecture du pipeline GitHub Actions</span>
+    </div>
+  </section>
+
+
+
+  <!-- Grandes étapes -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      Grandes étapes réalisées
+    </h2>
+    <div class="steps-timeline">
+      <div class="timeline-step">
+        <div class="timeline-number">1</div>
+        <p>Développement d'une première version de l'application et tests en local</p>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-number">2</div>
+        <p>Provisionnement des ressources AWS via Terraform</p>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-number">3</div>
+        <p>Installation automatisée de K3s sur les environnements via Ansible</p>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-number">4</div>
+        <p>Création des GitHub Actions workflows pour automatiser le build et le déploiement des images Docker vers
+          Docker Hub</p>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-number">5</div>
+        <p>Déploiement d'une version enrichie avec Prometheus et Grafana pour l'observabilité</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implémentations -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      Implémentations
+    </h2>
+    <div class="implementations-grid">
+      <div class="impl-card">
+        <h3>Infrastructure as Code — Terraform</h3>
+        <p>L'intégralité de l'infrastructure AWS est provisionnée automatiquement : VPC, subnets, Security Groups,
+          instances EC2, base de données RDS PostgreSQL et Elastic IPs. Aucun clic dans la console AWS n'est nécessaire
+          pour recréer l'infrastructure depuis zéro.</p>
+      </div>
+      <div class="impl-card">
+        <h3>Configuration automatisée — Ansible</h3>
+        <p>L'installation et la configuration de K3s sur les instances EC2 est entièrement automatisée via des playbooks
+          Ansible. Cela inclut la configuration réseau spécifique à AWS (interface ens5, certificats TLS, désactivation
+          de Traefik).</p>
+      </div>
+      <div class="impl-card">
+        <h3>Conteneurisation — Docker</h3>
+        <p>Les deux applications sont conteneurisées avec des Dockerfiles multi-stage optimisés, minimisant la taille
+          des images finales.</p>
+      </div>
+      <div class="impl-card">
+        <h3>Orchestration — K3s</h3>
+        <p>Les applications tournent dans un cluster Kubernetes léger (K3s). Le routing du trafic est géré par un pod
+          Nginx en mode hostNetwork qui sert de point d'entrée unique sur le port 80.</p>
+      </div>
+      <div class="impl-card">
+        <h3>Deux environnements séparés</h3>
+        <p>Chaque environnement possède son propre cluster K3s et sa propre base de données PostgreSQL isolée sur le
+          même RDS.</p>
+      </div>
+      <div class="impl-card">
+        <h3>Pipeline CI/CD — GitHub Actions</h3>
+        <p>Build, push sur Docker Hub et déploiement entièrement automatisés selon la branche.</p>
+      </div>
+      <div class="impl-card">
+        <h3>Observabilité — Prometheus &amp; Grafana</h3>
+        <p>Le backend expose ses métriques via OpenTelemetry, collectées par Prometheus et visualisées dans Grafana. Les
+          health checks permettent à K3s de redémarrer automatiquement les pods défaillants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Défis techniques -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+        </path>
+      </svg>
+      Défis techniques résolus
+    </h2>
+    <p class="section-text">
+      Le principal défi a été la configuration réseau de K3s sur AWS. Deux problèmes majeurs se sont présentés :
+    </p>
+    <div class="challenges-list">
+      <div class="challenge">
+        <div class="challenge-header">
+          <span class="challenge-icon">⚠️</span>
+          <h3>Problème 1 — Interface réseau</h3>
         </div>
+        <p>AWS nomme son interface réseau <code>ens5</code> et non <code>eth0</code> comme sur un serveur classique.
+          Sans cette configuration, Flannel (le réseau overlay de K3s) refusait de démarrer.</p>
       </div>
-      <div class="arch-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <polyline points="19 12 12 19 5 12"></polyline>
-        </svg>
-      </div>
-      <div class="arch-layer">
-        <div class="arch-label">CI/CD Pipeline</div>
-        <div class="arch-boxes">
-          <div class="arch-box highlight">Jenkins</div>
-          <div class="arch-box">SonarQube</div>
-          <div class="arch-box">Docker Build</div>
+      <div class="challenge">
+        <div class="challenge-header">
+          <span class="challenge-icon">⚠️</span>
+          <h3>Problème 2 — Traefik v3</h3>
         </div>
+        <p>La version de K3s installée incluait Traefik v3 qui présentait un bug avec Flannel — les requêtes HTTP ne
+          passaient jamais. Cela nous a amenés à implémenter une solution alternative.</p>
       </div>
-      <div class="arch-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <polyline points="19 12 12 19 5 12"></polyline>
-        </svg>
-      </div>
-      <div class="arch-layer">
-        <div class="arch-label">Infrastructure</div>
-        <div class="arch-boxes">
-          <div class="arch-box">Terraform</div>
-          <div class="arch-box highlight">Kubernetes</div>
-          <div class="arch-box">Azure Cloud</div>
+      <div class="challenge">
+        <div class="challenge-header">
+          <span class="challenge-icon">⚠️</span>
+          <h3>URLs hardcodées dans React</h3>
         </div>
+        <p>En développement, l'URL du backend était <code>http://localhost:7009/api/pixels</code> — impossible à
+          utiliser en production. La solution : utiliser des URLs relatives <code>/api/pixels</code> dans React et
+          laisser Nginx faire le routing vers le bon service selon le chemin.</p>
       </div>
-      <div class="arch-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <polyline points="19 12 12 19 5 12"></polyline>
-        </svg>
-      </div>
-      <div class="arch-layer">
-        <div class="arch-label">Monitoring</div>
-        <div class="arch-boxes">
-          <div class="arch-box">Prometheus</div>
-          <div class="arch-box">Grafana</div>
-          <div class="arch-box">Alerting</div>
+      <div class="solution">
+        <div class="challenge-header">
+          <span class="challenge-icon">✅</span>
+          <h3>La solution — Nginx hostNetwork</h3>
         </div>
+        <p>Au lieu de Traefik, on utilise un pod Nginx configuré avec <code>hostNetwork: true</code>. Cela permet au pod
+          de bypasser complètement le réseau K3s et de binder directement sur le port 80 de l'EC2.</p>
+      </div>
+    </div>
+    <div class="dual-images">
+      <div class="section-image">
+        <img src="images/pixelWar/les pods back front et nginx.png" alt="Les pods back, front et nginx">
+        <span class="image-caption">Les pods Back, Front et Nginx</span>
+      </div>
+      <div class="section-image">
+        <img src="images/pixelWar/gestion d'une requete a travers NGINX.png"
+          alt="Gestion d'une requête à travers Nginx">
+        <span class="image-caption">Gestion d'une requête à travers Nginx</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Observabilité -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      Observabilité — Prometheus &amp; Grafana
+    </h2>
+    <p class="section-text">
+      Le backend .NET expose ses métriques via <strong>OpenTelemetry</strong> sur l'endpoint <code>/metrics</code>,
+      et des <strong>health checks</strong> sur <code>/health</code>.
+    </p>
+    <p class="section-text">
+      Prometheus et Grafana sont installés via <strong>Helm</strong> dans un namespace dédié <code>monitoring</code>,
+      séparé du namespace <code>default</code> où tourne l'application. Cette séparation garantit que si le
+      monitoring plante, l'application continue de fonctionner.
+    </p>
+    <p class="section-text">
+      Un <strong>ServiceMonitor</strong> fait le lien entre Prometheus et le backend — il indique à Prometheus
+      quel service scraper, sur quel chemin et à quelle fréquence (toutes les 15 secondes).
+    </p>
+    <div class="section-image">
+      <img src="images/pixelWar/architecture communication backend avec namespace monitoring.png"
+        alt="Architecture communication backend avec namespace monitoring">
+      <span class="image-caption">Architecture de communication entre le backend et le namespace monitoring</span>
+    </div>
+  </section>
+
+  <!-- Choix architecturaux -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      Choix architecturaux
+    </h2>
+    <div class="choices-table">
+      <div class="choice-row choice-header">
+        <div class="choice-col">Choix</div>
+        <div class="choice-col">Justification</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">K3s plutôt qu'EKS</div>
+        <div class="choice-col">Légèreté, coût réduit, installation contrôlée via Ansible</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">Nginx hostNetwork</div>
+        <div class="choice-col">Solution simple et fiable face au bug Traefik v3 sur K3s</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">ClusterIP plutôt que NodePort</div>
+        <div class="choice-col">URL relative dans React, sécurité, point d'entrée unique</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">RDS managé</div>
+        <div class="choice-col">Backups automatiques, haute disponibilité, zéro maintenance PostgreSQL</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">Elastic IPs</div>
+        <div class="choice-col">Stabilité des IPs publiques entre les redémarrages d'instances</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">tf.state versionné</div>
+        <div class="choice-col">Permet de retrouver l'état exact de l'infrastructure et d'éviter les conflits lors de
+          modifications parallèles</div>
+      </div>
+      <div class="choice-row">
+        <div class="choice-col choice-label">Clé SSH dans AWS Key Pairs</div>
+        <div class="choice-col">Accès sécurisé aux EC2 via Ansible sans mot de passe, révocable à tout moment</div>
       </div>
     </div>
   </section>
