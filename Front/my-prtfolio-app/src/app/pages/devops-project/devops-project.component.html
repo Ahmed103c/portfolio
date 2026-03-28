@@ -1,0 +1,193 @@
+<div class="devops-page">
+  <!-- Back Navigation -->
+  <a routerLink="/" class="back-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Retour au portfolio</span>
+  </a>
+
+  <!-- Hero Header -->
+  <header class="project-hero">
+    <div class="hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+      <span>Projet DevOps</span>
+    </div>
+    <h1 class="hero-title">Pipeline CI/CD &<br>Infrastructure Cloud</h1>
+    <p class="hero-subtitle">
+      Conception et mise en place d'une infrastructure DevOps complète pour une application cloud-native,
+      incluant l'automatisation du déploiement, le monitoring et la gestion de l'infrastructure as code.
+    </p>
+  </header>
+
+  <!-- Pipeline Overview -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+      </svg>
+      Vue d'ensemble du Pipeline
+    </h2>
+    <div class="pipeline-overview">
+      <div class="pipeline-step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Code & Versionning</h3>
+          <p>Gestion du code source avec Git, stratégie de branching GitFlow, et revue de code systématique via Pull Requests.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Build & Test</h3>
+          <p>Compilation automatisée, exécution des tests unitaires et d'intégration, analyse de qualité du code avec SonarQube.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Conteneurisation</h3>
+          <p>Construction d'images Docker optimisées multi-stage, push vers un registre privé (ACR/Docker Hub).</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Déploiement</h3>
+          <p>Déploiement automatique sur Kubernetes avec stratégie blue/green, rollback automatique en cas d'échec.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      Technologies Utilisées
+    </h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-card-icon docker">🐳</div>
+        <h3>Docker</h3>
+        <p>Conteneurisation de l'application et de ses dépendances</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon k8s">☸️</div>
+        <h3>Kubernetes</h3>
+        <p>Orchestration des conteneurs et scaling automatique</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon jenkins">⚙️</div>
+        <h3>Jenkins</h3>
+        <p>Pipeline CI/CD avec Jenkinsfile déclaratif</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon terraform">🏗️</div>
+        <h3>Terraform</h3>
+        <p>Infrastructure as Code pour le provisioning cloud</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon azure">☁️</div>
+        <h3>Azure</h3>
+        <p>Plateforme cloud pour l'hébergement et les services managés</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon monitoring">📊</div>
+        <h3>Prometheus & Grafana</h3>
+        <p>Monitoring, alerting et visualisation des métriques</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="section-block">
+    <h2 class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+        <polyline points="2 17 12 22 22 17"></polyline>
+        <polyline points="2 12 12 17 22 12"></polyline>
+      </svg>
+      Architecture du Projet
+    </h2>
+    <div class="architecture-diagram">
+      <div class="arch-layer">
+        <div class="arch-label">Développeur</div>
+        <div class="arch-boxes">
+          <div class="arch-box">Git Push</div>
+          <div class="arch-box">Pull Request</div>
+        </div>
+      </div>
+      <div class="arch-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </div>
+      <div class="arch-layer">
+        <div class="arch-label">CI/CD Pipeline</div>
+        <div class="arch-boxes">
+          <div class="arch-box highlight">Jenkins</div>
+          <div class="arch-box">SonarQube</div>
+          <div class="arch-box">Docker Build</div>
+        </div>
+      </div>
+      <div class="arch-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </div>
+      <div class="arch-layer">
+        <div class="arch-label">Infrastructure</div>
+        <div class="arch-boxes">
+          <div class="arch-box">Terraform</div>
+          <div class="arch-box highlight">Kubernetes</div>
+          <div class="arch-box">Azure Cloud</div>
+        </div>
+      </div>
+      <div class="arch-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </div>
+      <div class="arch-layer">
+        <div class="arch-label">Monitoring</div>
+        <div class="arch-boxes">
+          <div class="arch-box">Prometheus</div>
+          <div class="arch-box">Grafana</div>
+          <div class="arch-box">Alerting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <div class="page-footer">
+    <a routerLink="/" class="footer-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Retour au portfolio</span>
+    </a>
+  </div>
+</div>
